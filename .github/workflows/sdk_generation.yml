@@ -3,9 +3,9 @@ name: Generate
 on:
   workflow_call:
     inputs:
-      speakeasy_gen_config_path:
+      is_production_release:
         type: string
-        required: true
+        default: false
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -35,7 +35,7 @@ jobs:
       - name: Get target
         id: target
         run: |
-          if [[ "${{ speakeasy_gen_config_path }}" == ".speakeasy/gen.yaml" ]]; then
+          if [[ "${{ inputs.is_production_release }}" == "true" ]]; then
             echo "target=orq-test2-python" >> "$GITHUB_OUTPUT"
           else
             echo "target=orq-test2-prerelease-python" >> "$GITHUB_OUTPUT"
