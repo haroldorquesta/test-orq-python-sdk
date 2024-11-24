@@ -63,7 +63,7 @@ components:
     "ReportFeedbackRequest":
       type: "object"
       properties:
-        "property":
+        "property2":
           type: "string"
           description: "A string describing the specific property or aspect rated."
         "value":
@@ -83,7 +83,7 @@ components:
     "ReportFeedbackResponse":
       type: "object"
       properties:
-        "property":
+        "property2":
           type: "string"
           description: "A string describing the specific property or aspect rated."
         "value":
@@ -33334,7 +33334,7 @@ paths:
             schema:
               type: "object"
               properties:
-                "property":
+                "property2":
                   type: "string"
                   description: "A string describing the specific property or aspect rated."
                 "value":
@@ -33351,7 +33351,7 @@ paths:
                 - "property"
                 - "value"
                 - "trace_id"
-            example: {"value": ["good"], "property": "rating", "trace_id": "67HTZ65Z9W91HSF51CW68KK1QH"}
+            example: {"value": ["good"], "property2": "rating", "trace_id": "67HTZ65Z9W91HSF51CW68KK1QH"}
       responses:
         "200":
           description: "Successful operation"
@@ -33360,7 +33360,7 @@ paths:
               schema:
                 type: "object"
                 properties:
-                  "property":
+                  "property2":
                     type: "string"
                     description: "A string describing the specific property or aspect rated."
                   "value":
