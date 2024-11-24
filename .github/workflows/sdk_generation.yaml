@@ -1,26 +1,26 @@
 name: Generate
+
+on:
+  workflow_call:
+    inputs:
+      speakeasy_gen_config_path:
+        type: string
+        required: true
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  DOCKER_DEFAULT_PLATFORM: linux/amd64
+
 permissions:
   checks: write
   contents: write
   pull-requests: write
   statuses: write
   id-token: write
-"on":
-  workflow_dispatch:
-    inputs:
-      force:
-        description: Force generation of SDKs
-        type: boolean
-        default: false
-      set_version:
-        description: optionally set a specific SDK version
-        type: string
-  push:
-    branches:
-      - main
-    paths:
-      - .speakeasy/gen.yaml
-      - packages/orq-rc/.speakeasy/gen.yaml
+
 jobs:
   get_target:
     runs-on: ubuntu-latest
@@ -35,11 +35,11 @@ jobs:
       - name: Get target
         id: target
         run: |
-          SDK_TARGET_VERSION=$(yq '.typescript.version' .speakeasy/gen.yaml)
+          SDK_TARGET_VERSION=$(yq '.python.version' ${{ inputs.speakeasy_gen_config_path }})
           if [[ $SDK_TARGET_VERSION == *rc* ]]; then
-             echo "target=orq-test2-prerelease-node" >> "$GITHUB_OUTPUT"
+             echo "target=orq-test2-prerelease-python" >> "$GITHUB_OUTPUT"
           else
-            echo "target=orq-test2-node" >> "$GITHUB_OUTPUT"
+            echo "target=orq-test2-python" >> "$GITHUB_OUTPUT"
           fi
   generate:
     needs: get_target
