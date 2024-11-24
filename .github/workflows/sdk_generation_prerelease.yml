@@ -13,4 +13,4 @@ jobs:
     name: Runner
     secrets: inherit
     with:
-      is_production_release: false
+      target: orq-test2-prerelease-python
