@@ -13,7 +13,7 @@ sources:
             location: registry.speakeasyapi.dev/orq/orq/orq-test2-prerelease-python
 targets:
     orq-test2-python:
-        target: typescript
+        target: python
         source: orq-test2-python
         publish:
             pypi:
@@ -23,8 +23,9 @@ targets:
                 location: registry.speakeasyapi.dev/orq/orq/orq-test2-python-code-samples
             blocking: false
     orq-test2-prerelease-python:
-        target: typescript
+        target: python
         source: orq-test2-prerelease-python
+        output: ./packages/orq-rc
         publish:
             pypi:
                 token: $pypi_token
