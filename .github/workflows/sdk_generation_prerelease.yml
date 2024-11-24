@@ -13,5 +13,4 @@ jobs:
     name: Runner
     secrets: inherit
     with:
-      speakeasy_gen_config_path: packages/orq-rc/.speakeasy/gen.yaml
       is_production_release: false
