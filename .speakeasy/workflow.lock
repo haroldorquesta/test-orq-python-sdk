@@ -1,0 +1,54 @@
+speakeasyVersion: 1.444.3
+sources:
+    orq-test2-prerelease-python:
+        sourceNamespace: orq-test2-prerelease-python
+        sourceRevisionDigest: sha256:80d031f93774c25077991f495fdb43752f013a462b795f1ff92369a5a54cf8c5
+        sourceBlobDigest: sha256:41e6b1c06d0e54e2dc027526299a31f848f2fd703581193212bb159fff2de1d3
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1732460950
+            - "2.0"
+targets:
+    orq-test2-prerelease-python:
+        source: orq-test2-prerelease-python
+        sourceNamespace: orq-test2-prerelease-python
+        sourceRevisionDigest: sha256:80d031f93774c25077991f495fdb43752f013a462b795f1ff92369a5a54cf8c5
+        sourceBlobDigest: sha256:41e6b1c06d0e54e2dc027526299a31f848f2fd703581193212bb159fff2de1d3
+        codeSamplesNamespace: orq-test2-prerelease-python-code-samples
+        codeSamplesRevisionDigest: sha256:d138e51b66f037f9a55f90644794bdd76e1ed1c94e07a66dd3fcebe0f3fdd45b
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        orq-test2-prerelease-python:
+            inputs:
+                - location: ./openapi-prerelease.yaml
+            registry:
+                location: registry.speakeasyapi.dev/orq/orq/orq-test2-prerelease-python
+        orq-test2-python:
+            inputs:
+                - location: ./openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/orq/orq/orq-test2-python
+    targets:
+        orq-test2-prerelease-python:
+            target: python
+            source: orq-test2-prerelease-python
+            output: ./packages/orq-rc
+            publish:
+                pypi:
+                    token: $pypi_token
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/orq/orq/orq-test2-prerelease-python-code-samples
+                blocking: false
+        orq-test2-python:
+            target: python
+            source: orq-test2-python
+            publish:
+                pypi:
+                    token: $pypi_token
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/orq/orq/orq-test2-python-code-samples
+                blocking: false

@@ -1,27 +1,17 @@
 workflowVersion: 1.0.0
 speakeasyVersion: latest
 sources:
-    orq-test2-python:
-        inputs:
-            - location: ./openapi.yaml
-        registry:
-            location: registry.speakeasyapi.dev/orq/orq/orq-test2-python
     orq-test2-prerelease-python:
         inputs:
             - location: ./openapi-prerelease.yaml
         registry:
             location: registry.speakeasyapi.dev/orq/orq/orq-test2-prerelease-python
-targets:
     orq-test2-python:
-        target: python
-        source: orq-test2-python
-        publish:
-            pypi:
-                token: $pypi_token
-        codeSamples:
-            registry:
-                location: registry.speakeasyapi.dev/orq/orq/orq-test2-python-code-samples
-            blocking: false
+        inputs:
+            - location: ./openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/orq/orq/orq-test2-python
+targets:
     orq-test2-prerelease-python:
         target: python
         source: orq-test2-prerelease-python
@@ -32,4 +22,14 @@ targets:
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/orq/orq/orq-test2-prerelease-python-code-samples
+            blocking: false
+    orq-test2-python:
+        target: python
+        source: orq-test2-python
+        publish:
+            pypi:
+                token: $pypi_token
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/orq/orq/orq-test2-python-code-samples
             blocking: false

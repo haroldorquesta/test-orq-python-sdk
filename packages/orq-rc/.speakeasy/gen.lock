@@ -1,0 +1,407 @@
+lockVersion: 2.0.0
+id: 4fbc8657-7a3a-4200-b91a-5cee84581963
+management:
+  docChecksum: 91744d7684c5ee4196c4af7fbc737c9d
+  docVersion: "2.0"
+  speakeasyVersion: 1.444.3
+  generationVersion: 2.461.4
+  releaseVersion: 1.41.0-rc.8
+  configChecksum: 4427f472c623cd02e08af453c8467a1c
+  repoURL: https://github.com/haroldorquesta/test-orq-python-sdk.git
+  repoSubDirectory: packages/orq-rc
+  installationURL: https://github.com/haroldorquesta/test-orq-python-sdk.git#subdirectory=packages/orq-rc
+  published: true
+features:
+  python:
+    acceptHeaders: 3.0.0
+    additionalDependencies: 1.0.0
+    constsAndDefaults: 1.0.5
+    core: 5.6.6
+    defaultEnabledRetries: 0.2.0
+    enumUnions: 0.1.0
+    envVarSecurityUsage: 0.3.2
+    flatRequests: 1.0.1
+    flattening: 3.1.0
+    globalSecurity: 3.0.2
+    globalSecurityCallbacks: 1.0.0
+    globalSecurityFlattening: 1.0.0
+    globalServerURLs: 3.0.0
+    groups: 3.0.0
+    ignores: 3.0.0
+    inputOutputModels: 3.0.0
+    methodArguments: 1.0.2
+    multipartFileContentType: 1.0.0
+    nameOverrides: 3.0.0
+    nullables: 1.0.0
+    operationTimeout: 0.3.0
+    responseFormat: 1.0.1
+    retries: 3.0.2
+    sdkHooks: 1.0.0
+    serverEvents: 1.0.4
+    serverEventsSentinels: 0.1.0
+    tests: 1.6.0
+    unions: 3.0.3
+    uploadStreams: 1.0.0
+generatedFiles:
+  - .gitattributes
+  - .python-version
+  - .vscode/settings.json
+  - CONTRIBUTING.md
+  - USAGE.md
+  - docs/models/bulkfileuploadfiles.md
+  - docs/models/bulkfileuploadfilespurpose.md
+  - docs/models/bulkfileuploadpurpose.md
+  - docs/models/bulkfileuploadrequestbody.md
+  - docs/models/choices.md
+  - docs/models/content.md
+  - docs/models/content2.md
+  - docs/models/createcontactrequestbody.md
+  - docs/models/createcontactresponsebody.md
+  - docs/models/createfeedbackrequestbody.md
+  - docs/models/createfeedbackresponsebody.md
+  - docs/models/createfeedbackvalue.md
+  - docs/models/data.md
+  - docs/models/data1.md
+  - docs/models/data2.md
+  - docs/models/datafunction.md
+  - docs/models/datametadata.md
+  - docs/models/dataoutputtype.md
+  - docs/models/datatype.md
+  - docs/models/deletev2resourcesevaluatorsidrequest.md
+  - docs/models/deletev2resourcesevaluatorsidresponsebody.md
+  - docs/models/deploymentcreatemetric21.md
+  - docs/models/deploymentcreatemetric22.md
+  - docs/models/deploymentcreatemetric2deploymentsmetricstype.md
+  - docs/models/deploymentcreatemetric2imageurl.md
+  - docs/models/deploymentcreatemetric2type.md
+  - docs/models/deploymentcreatemetriccontent.md
+  - docs/models/deploymentcreatemetriccontent2.md
+  - docs/models/deploymentcreatemetricfeedback.md
+  - docs/models/deploymentcreatemetricfunction.md
+  - docs/models/deploymentcreatemetricmessagedeploymentsmetricsrole.md
+  - docs/models/deploymentcreatemetricmessagerole.md
+  - docs/models/deploymentcreatemetricmessages.md
+  - docs/models/deploymentcreatemetricrequest.md
+  - docs/models/deploymentcreatemetricrequestbody.md
+  - docs/models/deploymentcreatemetricresponsebody.md
+  - docs/models/deploymentcreatemetricrole.md
+  - docs/models/deploymentcreatemetrictoolcalls.md
+  - docs/models/deploymentcreatemetrictype.md
+  - docs/models/deploymentgetconfig21.md
+  - docs/models/deploymentgetconfig22.md
+  - docs/models/deploymentgetconfig22input.md
+  - docs/models/deploymentgetconfig2deployments1.md
+  - docs/models/deploymentgetconfig2deployments2.md
+  - docs/models/deploymentgetconfig2deploymentsimageurl.md
+  - docs/models/deploymentgetconfig2deploymentsrequestrequestbodytype.md
+  - docs/models/deploymentgetconfig2deploymentsrequesttype.md
+  - docs/models/deploymentgetconfig2deploymentsresponse1.md
+  - docs/models/deploymentgetconfig2deploymentsresponse200type.md
+  - docs/models/deploymentgetconfig2deploymentsresponsetype.md
+  - docs/models/deploymentgetconfig2deploymentstype.md
+  - docs/models/deploymentgetconfig2imageurl.md
+  - docs/models/deploymentgetconfig2imageurlinput.md
+  - docs/models/deploymentgetconfig2type.md
+  - docs/models/deploymentgetconfigcontent.md
+  - docs/models/deploymentgetconfigcontent2.md
+  - docs/models/deploymentgetconfigcontent2input.md
+  - docs/models/deploymentgetconfigcontentdeployments2.md
+  - docs/models/deploymentgetconfigcontentinput.md
+  - docs/models/deploymentgetconfigdeploymentscontent.md
+  - docs/models/deploymentgetconfigdeploymentsfunction.md
+  - docs/models/deploymentgetconfigdeploymentsmessages.md
+  - docs/models/deploymentgetconfigdeploymentsresponse200applicationjsontype.md
+  - docs/models/deploymentgetconfigdeploymentsresponse200function.md
+  - docs/models/deploymentgetconfigdeploymentsresponse200type.md
+  - docs/models/deploymentgetconfigdeploymentsresponsefunction.md
+  - docs/models/deploymentgetconfigdeploymentsresponserole.md
+  - docs/models/deploymentgetconfigdeploymentsresponsetoolcalls.md
+  - docs/models/deploymentgetconfigdeploymentsresponsetype.md
+  - docs/models/deploymentgetconfigdeploymentsrole.md
+  - docs/models/deploymentgetconfigdeploymentstoolcalls.md
+  - docs/models/deploymentgetconfigdeploymentstype.md
+  - docs/models/deploymentgetconfigfunction.md
+  - docs/models/deploymentgetconfiginputs.md
+  - docs/models/deploymentgetconfiginvokeoptions.md
+  - docs/models/deploymentgetconfigmessages.md
+  - docs/models/deploymentgetconfigprefixmessages.md
+  - docs/models/deploymentgetconfigrequestbody.md
+  - docs/models/deploymentgetconfigresponsebody.md
+  - docs/models/deploymentgetconfigresponseformattype.md
+  - docs/models/deploymentgetconfigrole.md
+  - docs/models/deploymentgetconfigtoolcalls.md
+  - docs/models/deploymentgetconfigtype.md
+  - docs/models/deploymentgetconfiguserid.md
+  - docs/models/deploymentinvokechoices.md
+  - docs/models/deploymentinvokedata.md
+  - docs/models/deploymentinvokedeploymentschoices.md
+  - docs/models/deploymentinvokedeploymentsmessage.md
+  - docs/models/deploymentinvokedeploymentsobject.md
+  - docs/models/deploymentinvokedeploymentsresponsebody.md
+  - docs/models/deploymentinvokemessage.md
+  - docs/models/deploymentinvokemessage1.md
+  - docs/models/deploymentinvokemessage2.md
+  - docs/models/deploymentinvokemessage3.md
+  - docs/models/deploymentinvokemessagedeployments1.md
+  - docs/models/deploymentinvokemessagedeployments2.md
+  - docs/models/deploymentinvokemessagedeploymentsfunction.md
+  - docs/models/deploymentinvokemessagedeploymentsresponse200role.md
+  - docs/models/deploymentinvokemessagedeploymentsresponse200texteventstreamresponsebodyrole.md
+  - docs/models/deploymentinvokemessagedeploymentsresponse200texteventstreamrole.md
+  - docs/models/deploymentinvokemessagedeploymentsresponserole.md
+  - docs/models/deploymentinvokemessagedeploymentsrole.md
+  - docs/models/deploymentinvokemessagedeploymentstoolcalls.md
+  - docs/models/deploymentinvokemessagedeploymentstype.md
+  - docs/models/deploymentinvokemessagefunction.md
+  - docs/models/deploymentinvokemessagerole.md
+  - docs/models/deploymentinvokemessagetoolcalls.md
+  - docs/models/deploymentinvokemessagetype.md
+  - docs/models/deploymentinvokemetadata.md
+  - docs/models/deploymentinvokeobject.md
+  - docs/models/deploymentinvokeprovider.md
+  - docs/models/deploymentinvokeresponse.md
+  - docs/models/deploymentinvokeresponsebody.md
+  - docs/models/deploymentinvokeretrievals.md
+  - docs/models/deployments.md
+  - docs/models/deployments21.md
+  - docs/models/deployments22.md
+  - docs/models/deployments2deployments2.md
+  - docs/models/deployments2deploymentsresponsetype.md
+  - docs/models/deployments2deploymentstype.md
+  - docs/models/deployments2imageurl.md
+  - docs/models/deployments2messagescontenttype.md
+  - docs/models/deployments2messagestype.md
+  - docs/models/deployments2type.md
+  - docs/models/deploymentscontent.md
+  - docs/models/deploymentscontent2.md
+  - docs/models/deploymentsdeploymentscontent.md
+  - docs/models/deploymentsdeploymentsfunction.md
+  - docs/models/deploymentsdeploymentsresponse200type.md
+  - docs/models/deploymentsdeploymentsresponsefunction.md
+  - docs/models/deploymentsdeploymentsresponsetype.md
+  - docs/models/deploymentsdeploymentsrole.md
+  - docs/models/deploymentsdeploymentstoolcalls.md
+  - docs/models/deploymentsdeploymentstype.md
+  - docs/models/deploymentsencodingformat.md
+  - docs/models/deploymentsformat.md
+  - docs/models/deploymentsfunction.md
+  - docs/models/deploymentsmessages.md
+  - docs/models/deploymentsparameters.md
+  - docs/models/deploymentsphotorealversion.md
+  - docs/models/deploymentsprovider.md
+  - docs/models/deploymentsquality.md
+  - docs/models/deploymentsrequest.md
+  - docs/models/deploymentsresponsebody.md
+  - docs/models/deploymentsresponseformat.md
+  - docs/models/deploymentsresponseformat1.md
+  - docs/models/deploymentsresponseformat2.md
+  - docs/models/deploymentsresponseformatdeploymentstype.md
+  - docs/models/deploymentsresponseformattype.md
+  - docs/models/deploymentsrole.md
+  - docs/models/deploymentstoolcalls.md
+  - docs/models/deploymentstools.md
+  - docs/models/deploymentstype.md
+  - docs/models/encodingformat.md
+  - docs/models/file.md
+  - docs/models/fileuploadpurpose.md
+  - docs/models/fileuploadrequestbody.md
+  - docs/models/fileuploadresponsebody.md
+  - docs/models/format.md
+  - docs/models/function.md
+  - docs/models/getv2resourcesevaluatorstemplatesdata.md
+  - docs/models/getv2resourcesevaluatorstemplatesdatatype.md
+  - docs/models/getv2resourcesevaluatorstemplatesobject.md
+  - docs/models/getv2resourcesevaluatorstemplatesresponsebody.md
+  - docs/models/honoapierror.md
+  - docs/models/imageurl.md
+  - docs/models/inputs.md
+  - docs/models/invokeoptions.md
+  - docs/models/jsonschema.md
+  - docs/models/message.md
+  - docs/models/message1.md
+  - docs/models/message2.md
+  - docs/models/message3.md
+  - docs/models/messagefunction.md
+  - docs/models/messagerole.md
+  - docs/models/messages.md
+  - docs/models/messagetoolcalls.md
+  - docs/models/messagetype.md
+  - docs/models/metadata.md
+  - docs/models/modelparameters.md
+  - docs/models/modeltype.md
+  - docs/models/object.md
+  - docs/models/one.md
+  - docs/models/outputtype.md
+  - docs/models/parameters.md
+  - docs/models/performance.md
+  - docs/models/photorealversion.md
+  - docs/models/prefixmessages.md
+  - docs/models/promptconfig.md
+  - docs/models/provider.md
+  - docs/models/purpose.md
+  - docs/models/quality.md
+  - docs/models/remoteconfigsgetconfigrequestbody.md
+  - docs/models/remoteconfigsgetconfigresponsebody.md
+  - docs/models/remoteconfigsgetconfigtype.md
+  - docs/models/responsebody.md
+  - docs/models/responseformat.md
+  - docs/models/responseformat1.md
+  - docs/models/responseformat2.md
+  - docs/models/responseformatjsonschema.md
+  - docs/models/responseformattype.md
+  - docs/models/retrievals.md
+  - docs/models/role.md
+  - docs/models/security.md
+  - docs/models/three.md
+  - docs/models/toolcalls.md
+  - docs/models/tools.md
+  - docs/models/two.md
+  - docs/models/two1.md
+  - docs/models/two2.md
+  - docs/models/twoimageurl.md
+  - docs/models/twotype.md
+  - docs/models/type.md
+  - docs/models/usage.md
+  - docs/models/userid.md
+  - docs/models/utils/retryconfig.md
+  - docs/models/value.md
+  - docs/sdks/contacts/README.md
+  - docs/sdks/deploymentssdk/README.md
+  - docs/sdks/evals/README.md
+  - docs/sdks/evaluators/README.md
+  - docs/sdks/feedback/README.md
+  - docs/sdks/files/README.md
+  - docs/sdks/metrics/README.md
+  - docs/sdks/orq/README.md
+  - docs/sdks/remoteconfig/README.md
+  - poetry.toml
+  - py.typed
+  - pylintrc
+  - pyproject.toml
+  - scripts/prepare-readme.py
+  - scripts/publish.sh
+  - src/orq_poc_python_multi_env_version/__init__.py
+  - src/orq_poc_python_multi_env_version/_hooks/__init__.py
+  - src/orq_poc_python_multi_env_version/_hooks/sdkhooks.py
+  - src/orq_poc_python_multi_env_version/_hooks/types.py
+  - src/orq_poc_python_multi_env_version/_version.py
+  - src/orq_poc_python_multi_env_version/basesdk.py
+  - src/orq_poc_python_multi_env_version/contacts.py
+  - src/orq_poc_python_multi_env_version/deployments_sdk.py
+  - src/orq_poc_python_multi_env_version/evals.py
+  - src/orq_poc_python_multi_env_version/evaluators.py
+  - src/orq_poc_python_multi_env_version/feedback.py
+  - src/orq_poc_python_multi_env_version/files.py
+  - src/orq_poc_python_multi_env_version/httpclient.py
+  - src/orq_poc_python_multi_env_version/metrics.py
+  - src/orq_poc_python_multi_env_version/models/__init__.py
+  - src/orq_poc_python_multi_env_version/models/apierror.py
+  - src/orq_poc_python_multi_env_version/models/bulkfileuploadop.py
+  - src/orq_poc_python_multi_env_version/models/createcontactop.py
+  - src/orq_poc_python_multi_env_version/models/createfeedbackop.py
+  - src/orq_poc_python_multi_env_version/models/delete_v2_resources_evaluators_id_op.py
+  - src/orq_poc_python_multi_env_version/models/deploymentcreatemetricop.py
+  - src/orq_poc_python_multi_env_version/models/deploymentgetconfigop.py
+  - src/orq_poc_python_multi_env_version/models/deploymentinvokeop.py
+  - src/orq_poc_python_multi_env_version/models/deployments.py
+  - src/orq_poc_python_multi_env_version/models/deploymentsop.py
+  - src/orq_poc_python_multi_env_version/models/fileuploadop.py
+  - src/orq_poc_python_multi_env_version/models/get_v2_resources_evaluators_templatesop.py
+  - src/orq_poc_python_multi_env_version/models/honoapierror.py
+  - src/orq_poc_python_multi_env_version/models/remoteconfigsgetconfigop.py
+  - src/orq_poc_python_multi_env_version/models/security.py
+  - src/orq_poc_python_multi_env_version/py.typed
+  - src/orq_poc_python_multi_env_version/remoteconfig.py
+  - src/orq_poc_python_multi_env_version/sdk.py
+  - src/orq_poc_python_multi_env_version/sdkconfiguration.py
+  - src/orq_poc_python_multi_env_version/types/__init__.py
+  - src/orq_poc_python_multi_env_version/types/basemodel.py
+  - src/orq_poc_python_multi_env_version/utils/__init__.py
+  - src/orq_poc_python_multi_env_version/utils/annotations.py
+  - src/orq_poc_python_multi_env_version/utils/enums.py
+  - src/orq_poc_python_multi_env_version/utils/eventstreaming.py
+  - src/orq_poc_python_multi_env_version/utils/forms.py
+  - src/orq_poc_python_multi_env_version/utils/headers.py
+  - src/orq_poc_python_multi_env_version/utils/logger.py
+  - src/orq_poc_python_multi_env_version/utils/metadata.py
+  - src/orq_poc_python_multi_env_version/utils/queryparams.py
+  - src/orq_poc_python_multi_env_version/utils/requestbodies.py
+  - src/orq_poc_python_multi_env_version/utils/retries.py
+  - src/orq_poc_python_multi_env_version/utils/security.py
+  - src/orq_poc_python_multi_env_version/utils/serializers.py
+  - src/orq_poc_python_multi_env_version/utils/url.py
+  - src/orq_poc_python_multi_env_version/utils/values.py
+examples:
+  CreateContact:
+    speakeasy-default-create-contact:
+      requestBody:
+        application/json: {"external_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "external_id": "<id>"}
+  CreateFeedback:
+    "":
+      requestBody:
+        application/json: {"property2": "rating", "value": ["good"], "trace_id": "67HTZ65Z9W91HSF51CW68KK1QH"}
+      responses:
+        "200":
+          application/json: {"value": "<value>", "trace_id": "<id>", "id": "<id>"}
+  Deployments:
+    speakeasy-default-deployments:
+      responses:
+        "200":
+          application/json: {"object": "list", "data": [], "has_more": false}
+        "500":
+          application/json: {"message": "<value>"}
+  DeploymentGetConfig:
+    speakeasy-default-deployment-get-config:
+      requestBody:
+        application/json: {"key": "<key>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "provider": "<value>", "model": "ATS", "version": "<value>", "messages": []}
+  DeploymentInvoke:
+    speakeasy-default-deployment-invoke:
+      requestBody:
+        application/json: {"key": "<key>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "created": "2023-02-27T07:01:10.482Z", "object": "completion", "model": "El Camino", "provider": "cohere", "is_final": false, "choices": [{"index": "1729.12"}, {"index": "3047.15"}]}
+  DeploymentCreateMetric:
+    speakeasy-default-deployment-create-metric:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"code": "4865.89", "success": false}
+  FileUpload:
+    speakeasy-default-file-upload:
+      responses:
+        "200":
+          application/json: {"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "4036.54", "file_name": "example.file"}
+  BulkFileUpload:
+    speakeasy-default-bulk-file-upload:
+      requestBody:
+        multipart/form-data: {"files": [{}], "purpose": "retrieval"}
+      responses:
+        "200":
+          application/json: [{"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "4883.89", "file_name": "example.file"}, {"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "9335.52", "file_name": "example.file"}, {"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "561.36", "file_name": "example.file"}]
+  get_/v2/resources/evaluators/templates:
+    speakeasy-default-get-/v2-/resources/evaluators/templates:
+      responses:
+        "200":
+          application/json: {"object": "list", "data": [{"_id": "<id>", "display_name": "Christop77", "description": "sugary within whale successfully", "prompt": "<value>", "output_type": "string", "type": "llm_eval"}, {"_id": "<id>", "display_name": "Carlee_Muller74", "description": "nor swordfish gee rim kiddingly between", "prompt": "<value>", "output_type": "enum", "type": "llm_eval"}, {"_id": "<id>", "display_name": "Minnie_Volkman", "description": "charm pack wherever airline rationale cinder alongside reassuringly pfft till", "function": "is_valid_json", "output_type": "number", "type": "function_eval"}], "has_more": false}
+  delete_/v2/resources/evaluators/{id}:
+    speakeasy-default-delete-/v2-/resources/evaluators/{id}:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "404":
+          application/json: {"message": "<value>"}
+  RemoteConfigsGetConfig:
+    speakeasy-default-remote-configs-get-config:
+      responses:
+        "200":
+          application/json: {"type": "boolean"}
