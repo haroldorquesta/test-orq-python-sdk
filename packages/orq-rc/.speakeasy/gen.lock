@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4fbc8657-7a3a-4200-b91a-5cee84581963
 management:
-  docChecksum: 91744d7684c5ee4196c4af7fbc737c9d
+  docChecksum: ec6475d6d464f36ee02644b320ce511f
   docVersion: "2.0"
   speakeasyVersion: 1.444.3
   generationVersion: 2.461.4
-  releaseVersion: 1.41.0-rc.8
-  configChecksum: 4427f472c623cd02e08af453c8467a1c
+  releaseVersion: 1.41.0-rc.15
+  configChecksum: c8bd599b2bf8877a7571087e561747a7
   repoURL: https://github.com/haroldorquesta/test-orq-python-sdk.git
   repoSubDirectory: packages/orq-rc
   installationURL: https://github.com/haroldorquesta/test-orq-python-sdk.git#subdirectory=packages/orq-rc
@@ -55,8 +55,6 @@ generatedFiles:
   - docs/models/choices.md
   - docs/models/content.md
   - docs/models/content2.md
-  - docs/models/createcontactrequestbody.md
-  - docs/models/createcontactresponsebody.md
   - docs/models/createfeedbackrequestbody.md
   - docs/models/createfeedbackresponsebody.md
   - docs/models/createfeedbackvalue.md
@@ -265,7 +263,6 @@ generatedFiles:
   - docs/models/userid.md
   - docs/models/utils/retryconfig.md
   - docs/models/value.md
-  - docs/sdks/contacts/README.md
   - docs/sdks/deploymentssdk/README.md
   - docs/sdks/evals/README.md
   - docs/sdks/evaluators/README.md
@@ -286,7 +283,6 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/_hooks/types.py
   - src/orq_poc_python_multi_env_version/_version.py
   - src/orq_poc_python_multi_env_version/basesdk.py
-  - src/orq_poc_python_multi_env_version/contacts.py
   - src/orq_poc_python_multi_env_version/deployments_sdk.py
   - src/orq_poc_python_multi_env_version/evals.py
   - src/orq_poc_python_multi_env_version/evaluators.py
@@ -297,7 +293,6 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/models/__init__.py
   - src/orq_poc_python_multi_env_version/models/apierror.py
   - src/orq_poc_python_multi_env_version/models/bulkfileuploadop.py
-  - src/orq_poc_python_multi_env_version/models/createcontactop.py
   - src/orq_poc_python_multi_env_version/models/createfeedbackop.py
   - src/orq_poc_python_multi_env_version/models/delete_v2_resources_evaluators_id_op.py
   - src/orq_poc_python_multi_env_version/models/deploymentcreatemetricop.py

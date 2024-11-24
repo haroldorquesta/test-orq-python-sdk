@@ -8,7 +8,6 @@ from .utils.retries import RetryConfig
 import httpx
 from orq_poc_python_multi_env_version import models, utils
 from orq_poc_python_multi_env_version._hooks import SDKHooks
-from orq_poc_python_multi_env_version.contacts import Contacts
 from orq_poc_python_multi_env_version.deployments_sdk import DeploymentsSDK
 from orq_poc_python_multi_env_version.evals import Evals
 from orq_poc_python_multi_env_version.evaluators import Evaluators
@@ -24,7 +23,6 @@ class Orq(BaseSDK):
     https://docs.orq.ai - orq.ai Documentation
     """
 
-    contacts: Contacts
     feedback: Feedback
     deployments: DeploymentsSDK
     files: Files
@@ -111,7 +109,6 @@ class Orq(BaseSDK):
         self._init_sdks()
 
     def _init_sdks(self):
-        self.contacts = Contacts(self.sdk_configuration)
         self.feedback = Feedback(self.sdk_configuration)
         self.deployments = DeploymentsSDK(self.sdk_configuration)
         self.files = Files(self.sdk_configuration)
