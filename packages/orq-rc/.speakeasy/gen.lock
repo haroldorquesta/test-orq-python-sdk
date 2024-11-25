@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4fbc8657-7a3a-4200-b91a-5cee84581963
 management:
-  docChecksum: 6d089131da127dae9ee2586a9294ae9e
+  docChecksum: c783d23f449b8d7e84089c9a3df093dd
   docVersion: "2.0"
   speakeasyVersion: 1.444.4
   generationVersion: 2.461.4
-  releaseVersion: 1.43.0-rc.0
-  configChecksum: 16d00b2241706723f0b50f7b66a75a43
+  releaseVersion: 1.43.0-rc.1
+  configChecksum: 7c0681a69673f55159b327c435b8cdd7
   repoURL: https://github.com/haroldorquesta/test-orq-python-sdk.git
   repoSubDirectory: packages/orq-rc
   installationURL: https://github.com/haroldorquesta/test-orq-python-sdk.git#subdirectory=packages/orq-rc
