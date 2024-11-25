@@ -2870,7 +2870,7 @@ components:
         "created":
           type: "string"
           format: "date-time"
-          default: "2024-11-22T11:10:58.858Z"
+          default: "2024-11-24T21:26:36.345Z"
           description: "The date and time the resource was created"
           readOnly: true
       required:
@@ -2914,7 +2914,7 @@ components:
           "created":
             type: "string"
             format: "date-time"
-            default: "2024-11-22T11:10:58.858Z"
+            default: "2024-11-24T21:26:36.345Z"
             description: "The date and time the resource was created"
             readOnly: true
         required:
@@ -3163,7 +3163,7 @@ components:
                           - type: "string"
                             format: "date-time"
                           - type: "string"
-                        default: "2024-11-22T11:10:58.406Z"
+                        default: "2024-11-24T21:26:35.570Z"
                         description: "The date and time the resource was created"
                         readOnly: true
                         format: "date-time"
@@ -3171,7 +3171,7 @@ components:
                         anyOf:
                           - type: "string"
                             format: "date-time"
-                            default: "2024-11-22T11:10:58.407Z"
+                            default: "2024-11-24T21:26:35.570Z"
                           - type: "string"
                         description: "The date and time the resource was last updated"
                         readOnly: true
@@ -3192,7 +3192,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -3200,7 +3200,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -3709,7 +3709,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -3717,7 +3717,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -3866,7 +3866,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -3874,7 +3874,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -4298,7 +4298,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -4306,7 +4306,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -4902,7 +4902,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -4910,7 +4910,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -5509,7 +5509,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -5517,7 +5517,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -7078,7 +7078,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -7086,7 +7086,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -7682,7 +7682,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -7690,7 +7690,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -8289,7 +8289,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -8297,7 +8297,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -8898,7 +8898,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -8906,7 +8906,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -9502,7 +9502,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -9510,7 +9510,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -10109,7 +10109,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -10117,7 +10117,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -10723,7 +10723,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -10731,7 +10731,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -11327,7 +11327,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -11335,7 +11335,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -11934,7 +11934,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-22T11:10:58.406Z"
+              default: "2024-11-24T21:26:35.570Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -11942,7 +11942,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-22T11:10:58.407Z"
+                  default: "2024-11-24T21:26:35.570Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -33302,7 +33302,7 @@ paths:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-22T11:10:58.406Z"
+                    default: "2024-11-24T21:26:35.570Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -33310,7 +33310,7 @@ paths:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-22T11:10:58.407Z"
+                        default: "2024-11-24T21:26:35.570Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -35072,7 +35072,7 @@ paths:
                   "created":
                     type: "string"
                     format: "date-time"
-                    default: "2024-11-22T11:10:58.858Z"
+                    default: "2024-11-24T21:26:36.345Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                 required:
@@ -35140,7 +35140,7 @@ paths:
                     "created":
                       type: "string"
                       format: "date-time"
-                      default: "2024-11-22T11:10:58.858Z"
+                      default: "2024-11-24T21:26:36.345Z"
                       description: "The date and time the resource was created"
                       readOnly: true
                   required:
@@ -35376,7 +35376,6 @@ paths:
           description: "Internal server error"
   "/v2/logs/query":
     post:
-      x-speakeasy-ignore: true
       requestBody:
         content:
           "application/json":
@@ -46255,7 +46254,6 @@ paths:
                   - "source"
   "/v2/logs/{id}":
     get:
-      x-speakeasy-ignore: true
       parameters:
         - schema:
             type: "string"
