@@ -91,5 +91,5 @@ class FileUploadResponseBody(BaseModel):
 
     file_name: str
 
-    created: Optional[datetime] = dateutil.parser.isoparse("2024-11-22T11:10:58.858Z")
+    created: Optional[datetime] = dateutil.parser.isoparse("2024-11-24T21:26:36.345Z")
     r"""The date and time the resource was created"""

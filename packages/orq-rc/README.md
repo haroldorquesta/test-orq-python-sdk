@@ -85,9 +85,7 @@ s = Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
 )
 
-res = s.feedback.create(value=[
-    "good",
-], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating")
+res = s.contacts.create(external_id="<id>")
 
 if res is not None:
     # handle response
@@ -107,9 +105,7 @@ async def main():
     s = Orq(
         api_key=os.getenv("ORQ_API_KEY", ""),
     )
-    res = await s.feedback.create_async(value=[
-        "good",
-    ], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating")
+    res = await s.contacts.create_async(external_id="<id>")
     if res is not None:
         # handle response
         pass
@@ -123,6 +119,10 @@ asyncio.run(main())
 
 <details open>
 <summary>Available methods</summary>
+
+### [contacts](docs/sdks/contacts/README.md)
+
+* [create](docs/sdks/contacts/README.md#create) - Update user information
 
 ### [deployments](docs/sdks/deploymentssdk/README.md)
 
@@ -231,9 +231,7 @@ s = Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
 )
 
-res = s.feedback.create(value=[
-    "good",
-], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating",
+res = s.contacts.create(external_id="<id>",
     RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
 
 if res is not None:
@@ -253,9 +251,7 @@ s = Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
 )
 
-res = s.feedback.create(value=[
-    "good",
-], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating")
+res = s.contacts.create(external_id="<id>")
 
 if res is not None:
     # handle response
@@ -327,9 +323,7 @@ s = Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
 )
 
-res = s.feedback.create(value=[
-    "good",
-], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating")
+res = s.contacts.create(external_id="<id>")
 
 if res is not None:
     # handle response
@@ -439,9 +433,7 @@ s = Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
 )
 
-res = s.feedback.create(value=[
-    "good",
-], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating")
+res = s.contacts.create(external_id="<id>")
 
 if res is not None:
     # handle response

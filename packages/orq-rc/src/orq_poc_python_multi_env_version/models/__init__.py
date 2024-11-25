@@ -11,6 +11,12 @@ from .bulkfileuploadop import (
     ResponseBody,
     ResponseBodyTypedDict,
 )
+from .createcontactop import (
+    CreateContactRequestBody,
+    CreateContactRequestBodyTypedDict,
+    CreateContactResponseBody,
+    CreateContactResponseBodyTypedDict,
+)
 from .createfeedbackop import (
     CreateFeedbackRequestBody,
     CreateFeedbackRequestBodyTypedDict,
@@ -390,6 +396,10 @@ __all__ = [
     "Content2",
     "Content2TypedDict",
     "ContentTypedDict",
+    "CreateContactRequestBody",
+    "CreateContactRequestBodyTypedDict",
+    "CreateContactResponseBody",
+    "CreateContactResponseBodyTypedDict",
     "CreateFeedbackRequestBody",
     "CreateFeedbackRequestBodyTypedDict",
     "CreateFeedbackResponseBody",
