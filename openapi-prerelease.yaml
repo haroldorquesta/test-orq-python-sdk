@@ -35376,6 +35376,7 @@ paths:
           description: "Internal server error"
   "/v2/logs/query":
     post:
+      x-speakeasy-ignore: true
       requestBody:
         content:
           "application/json":
@@ -46254,6 +46255,7 @@ paths:
                   - "source"
   "/v2/logs/{id}":
     get:
+      x-speakeasy-ignore: true
       parameters:
         - schema:
             type: "string"
