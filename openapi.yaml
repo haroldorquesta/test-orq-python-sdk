@@ -33277,6 +33277,7 @@ paths:
       tags:
         - "Feedback"
       x-speakeasy-name-override: "create"
+      x-internal: true
       operationId: "CreateFeedback"
       description: "Submit feedback for the LLM transaction via the API"
       summary: "Submit feedback"
