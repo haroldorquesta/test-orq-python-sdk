@@ -134,14 +134,6 @@ asyncio.run(main())
 
 * [create](docs/sdks/metrics/README.md#create) - Add metrics
 
-### [evals](docs/sdks/evals/README.md)
-
-* [delete_v2_resources_evaluators_id_](docs/sdks/evals/README.md#delete_v2_resources_evaluators_id_) - Delete an eval
-
-### [evaluators](docs/sdks/evaluators/README.md)
-
-* [get_v2_resources_evaluators_templates](docs/sdks/evaluators/README.md#get_v2_resources_evaluators_templates) - Templates
-
 ### [feedback](docs/sdks/feedback/README.md)
 
 * [create](docs/sdks/feedback/README.md#create) - Submit feedback
@@ -151,10 +143,6 @@ asyncio.run(main())
 * [upload](docs/sdks/files/README.md#upload) - Upload file
 * [bulk_upload](docs/sdks/files/README.md#bulk_upload) - Bulk upload file
 
-
-### [remoteconfig](docs/sdks/remoteconfig/README.md)
-
-* [get_config](docs/sdks/remoteconfig/README.md#get_config) - Get Configurations
 
 </details>
 <!-- End Available Resources and Operations [operations] -->

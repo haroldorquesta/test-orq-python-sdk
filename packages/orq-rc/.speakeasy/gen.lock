@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4fbc8657-7a3a-4200-b91a-5cee84581963
 management:
-  docChecksum: d17cf4da1becd8250f6e97abe1eafc81
+  docChecksum: dd83205a613ab9dbe716b7f3a44c51db
   docVersion: "2.0"
   speakeasyVersion: 1.444.4
   generationVersion: 2.461.4
-  releaseVersion: 1.42.0-rc.2
-  configChecksum: 1d8bf8e5682673ccce425f2c77787e9d
+  releaseVersion: 1.42.0-rc.6
+  configChecksum: f5a9b4254a57919753a2653b28832b87
   repoURL: https://github.com/haroldorquesta/test-orq-python-sdk.git
   repoSubDirectory: packages/orq-rc
   installationURL: https://github.com/haroldorquesta/test-orq-python-sdk.git#subdirectory=packages/orq-rc
@@ -27,7 +27,6 @@ features:
     globalSecurityFlattening: 1.0.0
     globalServerURLs: 3.0.0
     groups: 3.0.0
-    ignores: 3.0.0
     inputOutputModels: 3.0.0
     methodArguments: 1.0.2
     multipartFileContentType: 1.0.0
@@ -61,14 +60,6 @@ generatedFiles:
   - docs/models/createfeedbackresponsebody.md
   - docs/models/createfeedbackvalue.md
   - docs/models/data.md
-  - docs/models/data1.md
-  - docs/models/data2.md
-  - docs/models/datafunction.md
-  - docs/models/datametadata.md
-  - docs/models/dataoutputtype.md
-  - docs/models/datatype.md
-  - docs/models/deletev2resourcesevaluatorsidrequest.md
-  - docs/models/deletev2resourcesevaluatorsidresponsebody.md
   - docs/models/deploymentcreatemetric21.md
   - docs/models/deploymentcreatemetric22.md
   - docs/models/deploymentcreatemetric2deploymentsmetricstype.md
@@ -208,10 +199,6 @@ generatedFiles:
   - docs/models/fileuploadresponsebody.md
   - docs/models/format.md
   - docs/models/function.md
-  - docs/models/getv2resourcesevaluatorstemplatesdata.md
-  - docs/models/getv2resourcesevaluatorstemplatesdatatype.md
-  - docs/models/getv2resourcesevaluatorstemplatesobject.md
-  - docs/models/getv2resourcesevaluatorstemplatesresponsebody.md
   - docs/models/honoapierror.md
   - docs/models/imageurl.md
   - docs/models/inputs.md
@@ -231,7 +218,6 @@ generatedFiles:
   - docs/models/modeltype.md
   - docs/models/object.md
   - docs/models/one.md
-  - docs/models/outputtype.md
   - docs/models/parameters.md
   - docs/models/performance.md
   - docs/models/photorealversion.md
@@ -240,9 +226,6 @@ generatedFiles:
   - docs/models/provider.md
   - docs/models/purpose.md
   - docs/models/quality.md
-  - docs/models/remoteconfigsgetconfigrequestbody.md
-  - docs/models/remoteconfigsgetconfigresponsebody.md
-  - docs/models/remoteconfigsgetconfigtype.md
   - docs/models/responsebody.md
   - docs/models/responseformat.md
   - docs/models/responseformat1.md
@@ -267,13 +250,10 @@ generatedFiles:
   - docs/models/value.md
   - docs/sdks/contacts/README.md
   - docs/sdks/deploymentssdk/README.md
-  - docs/sdks/evals/README.md
-  - docs/sdks/evaluators/README.md
   - docs/sdks/feedback/README.md
   - docs/sdks/files/README.md
   - docs/sdks/metrics/README.md
   - docs/sdks/orq/README.md
-  - docs/sdks/remoteconfig/README.md
   - poetry.toml
   - py.typed
   - pylintrc
@@ -288,8 +268,6 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/basesdk.py
   - src/orq_poc_python_multi_env_version/contacts.py
   - src/orq_poc_python_multi_env_version/deployments_sdk.py
-  - src/orq_poc_python_multi_env_version/evals.py
-  - src/orq_poc_python_multi_env_version/evaluators.py
   - src/orq_poc_python_multi_env_version/feedback.py
   - src/orq_poc_python_multi_env_version/files.py
   - src/orq_poc_python_multi_env_version/httpclient.py
@@ -299,19 +277,15 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/models/bulkfileuploadop.py
   - src/orq_poc_python_multi_env_version/models/createcontactop.py
   - src/orq_poc_python_multi_env_version/models/createfeedbackop.py
-  - src/orq_poc_python_multi_env_version/models/delete_v2_resources_evaluators_id_op.py
   - src/orq_poc_python_multi_env_version/models/deploymentcreatemetricop.py
   - src/orq_poc_python_multi_env_version/models/deploymentgetconfigop.py
   - src/orq_poc_python_multi_env_version/models/deploymentinvokeop.py
   - src/orq_poc_python_multi_env_version/models/deployments.py
   - src/orq_poc_python_multi_env_version/models/deploymentsop.py
   - src/orq_poc_python_multi_env_version/models/fileuploadop.py
-  - src/orq_poc_python_multi_env_version/models/get_v2_resources_evaluators_templatesop.py
   - src/orq_poc_python_multi_env_version/models/honoapierror.py
-  - src/orq_poc_python_multi_env_version/models/remoteconfigsgetconfigop.py
   - src/orq_poc_python_multi_env_version/models/security.py
   - src/orq_poc_python_multi_env_version/py.typed
-  - src/orq_poc_python_multi_env_version/remoteconfig.py
   - src/orq_poc_python_multi_env_version/sdk.py
   - src/orq_poc_python_multi_env_version/sdkconfiguration.py
   - src/orq_poc_python_multi_env_version/types/__init__.py
