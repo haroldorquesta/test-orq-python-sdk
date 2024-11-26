@@ -46432,13 +46432,13 @@ paths:
         - "resources"
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "createVersion"
-      x-speakeasy-ignore: true
       operationId: "CreatePromptVersion"
       summary: "Create a new prompt version"
       parameters:
         - schema:
             type: "string"
             description: "Prompt ID"
+          x-speakeasy-name-override: "prompt_id"
           required: true
           description: "Prompt ID"
           name: "id"
@@ -47049,13 +47049,13 @@ paths:
         - "resources"
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "update"
-      x-speakeasy-ignore: true
       operationId: "UpdatePrompt"
       summary: "Update a prompt"
       parameters:
         - schema:
             type: "string"
             description: "Prompt ID"
+          x-speakeasy-name-override: "prompt_id"
           required: true
           description: "Prompt ID"
           name: "id"
