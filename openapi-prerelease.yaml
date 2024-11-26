@@ -33717,6 +33717,8 @@ paths:
       operationId: "InvalidDeployment"
       description: "Explicitly invalidate a cache of a deployment"
       summary: "Invalidates cache"
+      security:
+        - ApiKey: []
       parameters:
         - schema:
             anyOf:
@@ -35142,6 +35144,8 @@ paths:
       x-speakeasy-name-override: "create"
       x-speakeasy-ignore: true
       operationId: "CreateDataset"
+      security:
+        - ApiKey: []
       description: "Create a dataset"
       summary: "Create a dataset"
       requestBody:
@@ -35180,6 +35184,8 @@ paths:
       x-speakeasy-name-override: "getAll"
       x-speakeasy-ignore: true
       operationId: "GetAllDataset"
+      security:
+        - ApiKey: []
       summary: "Get all datasets"
       parameters:
         - schema:
@@ -35439,6 +35445,8 @@ paths:
       x-speakeasy-name-override: "delete"
       x-speakeasy-ignore: true
       operationId: "DeleteDataset"
+      security:
+        - ApiKey: []
       summary: "Delete a dataset"
       parameters:
         - schema:
@@ -35460,6 +35468,8 @@ paths:
       x-speakeasy-name-override: "getOne"
       x-speakeasy-ignore: true
       operationId: "GetOneDataset"
+      security:
+        - ApiKey: []
       summary: "Get one  dataset"
       parameters:
         - schema:
@@ -35707,6 +35717,8 @@ paths:
       x-speakeasy-name-override: "update"
       x-speakeasy-ignore: true
       operationId: "UpdateDataset"
+      security:
+        - ApiKey: []
       description: "Update a dataset"
       summary: "Update a dataset"
       parameters:
@@ -35749,6 +35761,8 @@ paths:
       x-speakeasy-name-override: "createBulk"
       x-speakeasy-ignore: true
       operationId: "CreateBulkDatasetRows"
+      security:
+        - ApiKey: []
       description: "Create a list of dataset rows"
       parameters:
         - schema:
@@ -36016,6 +36030,8 @@ paths:
       x-speakeasy-name-override: "deleteBulk"
       x-speakeasy-ignore: true
       operationId: "DeleteBulkDatasetRows"
+      security:
+        - ApiKey: []
       summary: "Delete a list of dataset rows"
       parameters:
         - schema:
@@ -36036,6 +36052,8 @@ paths:
       x-speakeasy-name-override: "create"
       x-speakeasy-ignore: true
       operationId: "CreateDatasetRow"
+      security:
+        - ApiKey: []
       description: "Create a dataset row"
       parameters:
         - schema:
@@ -36292,6 +36310,8 @@ paths:
       x-speakeasy-name-override: "getAll"
       x-speakeasy-ignore: true
       operationId: "GetAllDatasetRows"
+      security:
+        - ApiKey: []
       description: "Retrieve all dataset rows"
       parameters:
         - schema:
@@ -36470,6 +36490,8 @@ paths:
       x-speakeasy-name-override: "delete"
       x-speakeasy-ignore: true
       operationId: "DeleteDatasetRow"
+      security:
+        - ApiKey: []
       summary: "Delete a dataset row"
       parameters:
         - schema:
@@ -36496,6 +36518,8 @@ paths:
       x-speakeasy-name-override: "getOne"
       x-speakeasy-ignore: true
       operationId: "GetOneDatasetRow"
+      security:
+        - ApiKey: []
       summary: "Get one dataset row"
       parameters:
         - schema:
@@ -36672,6 +36696,8 @@ paths:
       x-speakeasy-name-override: "update"
       x-speakeasy-ignore: true
       operationId: "UpdateDatasetRow"
+      security:
+        - ApiKey: []
       description: "Update a dataset row"
       parameters:
         - schema:
@@ -37055,6 +37081,8 @@ paths:
       x-speakeasy-ignore: true
       operationId: "GetEvals"
       summary: "Get all evals"
+      security:
+        - ApiKey: []
       responses:
         "200":
           description: "Returns a list of evals"
@@ -38078,6 +38106,8 @@ paths:
       x-speakeasy-ignore: true
       operationId: "CreateEval"
       summary: "Create an evaluator"
+      security:
+        - ApiKey: []
       requestBody:
         content:
           "application/json":
@@ -39976,6 +40006,8 @@ paths:
       x-speakeasy-ignore: true
       operationId: "GetEval"
       summary: "Get an eval"
+      security:
+        - ApiKey: []
       parameters:
         - schema:
             type: "string"
@@ -41003,6 +41035,8 @@ paths:
       x-speakeasy-ignore: true
       operationId: "UpdateEval"
       summary: "Update an eval"
+      security:
+        - ApiKey: []
       parameters:
         - schema:
             type: "string"
@@ -42886,6 +42920,8 @@ paths:
       x-speakeasy-ignore: true
       operationId: "DuplicateEval"
       summary: "Duplicate an evaluator"
+      security:
+        - ApiKey: []
       parameters:
         - schema:
             type: "string"
@@ -43914,6 +43950,8 @@ paths:
       x-speakeasy-group: "prompt.templates"
       x-speakeasy-name-override: "getAll"
       operationId: "GetAllPromptTemplates"
+      security:
+        - ApiKey: []
       summary: "Get all prompt templates"
       parameters:
         - schema:
@@ -45850,6 +45888,8 @@ paths:
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "create"
       operationId: "CreatePrompt"
+      security:
+        - ApiKey: []
       summary: "Create a new prompt"
       requestBody:
         content:
@@ -46435,6 +46475,8 @@ paths:
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "createVersion"
       operationId: "CreatePromptVersion"
+      security:
+        - ApiKey: []
       summary: "Create a new prompt version"
       parameters:
         - schema:
@@ -47012,6 +47054,8 @@ paths:
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "delete"
       operationId: "DeletePrompt"
+      security:
+        - ApiKey: []
       summary: "Delete a prompt"
       parameters:
         - schema:
@@ -47030,6 +47074,8 @@ paths:
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "getOne"
       operationId: "GetOnePrompt"
+      security:
+        - ApiKey: []
       summary: "Get one prompt"
       parameters:
         - schema:
@@ -47048,6 +47094,8 @@ paths:
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "update"
       operationId: "UpdatePrompt"
+      security:
+        - ApiKey: []
       summary: "Update a prompt"
       parameters:
         - schema:
@@ -49166,6 +49214,8 @@ paths:
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "duplicate"
       operationId: "DuplicatePrompt"
+      security:
+        - ApiKey: []
       summary: "Duplicate a prompt"
       parameters:
         - schema:
@@ -49185,6 +49235,8 @@ paths:
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "getAll"
       operationId: "GetAllPrompts"
+      security:
+        - ApiKey: []
       summary: "Get all prompts"
       parameters:
         - schema:
@@ -51128,6 +51180,8 @@ paths:
       x-speakeasy-group: "prompt.snippets"
       x-speakeasy-name-override: "findOne"
       operationId: "FindOnePromptSnippet"
+      security:
+        - ApiKey: []
       summary: "Get one prompt snippet"
       parameters:
         - schema:
