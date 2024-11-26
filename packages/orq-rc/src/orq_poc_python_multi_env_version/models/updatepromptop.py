@@ -457,7 +457,6 @@ class UpdatePromptMetadata(BaseModel):
 
 
 class UpdatePromptRequestBodyTypedDict(TypedDict):
-    id: str
     display_name: NotRequired[str]
     description: NotRequired[Nullable[str]]
     prompt_config: NotRequired[UpdatePromptPromptConfigTypedDict]
@@ -466,8 +465,6 @@ class UpdatePromptRequestBodyTypedDict(TypedDict):
 
 
 class UpdatePromptRequestBody(BaseModel):
-    id: Annotated[str, pydantic.Field(alias="_id")]
-
     display_name: Optional[str] = None
 
     description: OptionalNullable[str] = UNSET
@@ -516,16 +513,14 @@ class UpdatePromptRequestBody(BaseModel):
 
 
 class UpdatePromptRequestTypedDict(TypedDict):
-    prompt_id: str
+    id: str
     r"""Prompt ID"""
     request_body: NotRequired[UpdatePromptRequestBodyTypedDict]
 
 
 class UpdatePromptRequest(BaseModel):
-    prompt_id: Annotated[
-        str,
-        pydantic.Field(alias="id"),
-        FieldMetadata(path=PathParamMetadata(style="simple", explode=False)),
+    id: Annotated[
+        str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""Prompt ID"""
 
@@ -1796,7 +1791,7 @@ class ResponseBody3(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T10:00:21.083Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")
@@ -2992,7 +2987,7 @@ class ResponseBody2(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T10:00:21.083Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")
@@ -4196,7 +4191,7 @@ class ResponseBody1(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T10:00:21.083Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")

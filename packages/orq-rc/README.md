@@ -142,6 +142,7 @@ asyncio.run(main())
 ### [files](docs/sdks/files/README.md)
 
 * [upload](docs/sdks/files/README.md#upload) - Upload file
+* [bulk_upload](docs/sdks/files/README.md#bulk_upload) - Bulk upload file
 
 
 ### [prompt](docs/sdks/prompt/README.md)
@@ -332,7 +333,7 @@ from orq_poc_python_multi_env_version import Orq
 import os
 
 with Orq(
-    server_url="https://my.dev.orq.ai",
+    server_url="https://my.staging.orq.ai",
     api_key=os.getenv("ORQ_API_KEY", ""),
 ) as s:
     res = s.contacts.create(external_id="<id>")

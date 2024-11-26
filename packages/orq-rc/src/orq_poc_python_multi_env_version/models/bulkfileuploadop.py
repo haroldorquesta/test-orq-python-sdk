@@ -7,19 +7,19 @@ import io
 from orq_poc_python_multi_env_version.types import BaseModel
 from orq_poc_python_multi_env_version.utils import FieldMetadata, MultipartFormMetadata
 import pydantic
-from typing import IO, Literal, Optional, Union
+from typing import IO, List, Literal, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypedDict
 
 
-class FileTypedDict(TypedDict):
+class BulkFileUploadFilesTypedDict(TypedDict):
     file_name: str
     content: Union[bytes, IO[bytes], io.BufferedReader]
     content_type: NotRequired[str]
 
 
-class File(BaseModel):
+class BulkFileUploadFiles(BaseModel):
     file_name: Annotated[
-        str, pydantic.Field(alias="file"), FieldMetadata(multipart=True)
+        str, pydantic.Field(alias="files"), FieldMetadata(multipart=True)
     ]
 
     content: Annotated[
@@ -35,40 +35,32 @@ class File(BaseModel):
     ] = None
 
 
-Purpose = Literal["retrieval"]
+BulkFileUploadPurpose = Literal["retrieval"]
 r"""The intended purpose of the uploaded file."""
 
 
-class FileUploadRequestBodyTypedDict(TypedDict):
-    file: NotRequired[FileTypedDict]
-    r"""The file to be uploaded."""
-    purpose: NotRequired[Purpose]
+class BulkFileUploadRequestBodyTypedDict(TypedDict):
+    files: List[BulkFileUploadFilesTypedDict]
+    purpose: BulkFileUploadPurpose
     r"""The intended purpose of the uploaded file."""
 
 
-class FileUploadRequestBody(BaseModel):
-    file: Annotated[
-        Optional[File],
-        pydantic.Field(alias=""),
-        FieldMetadata(multipart=MultipartFormMetadata(file=True)),
-    ] = None
-    r"""The file to be uploaded."""
+class BulkFileUploadRequestBody(BaseModel):
+    files: Annotated[List[BulkFileUploadFiles], FieldMetadata(multipart=True)]
 
-    purpose: Annotated[Optional[Purpose], FieldMetadata(multipart=True)] = "retrieval"
+    purpose: Annotated[BulkFileUploadPurpose, FieldMetadata(multipart=True)]
     r"""The intended purpose of the uploaded file."""
 
 
-FileUploadPurpose = Literal["retrieval"]
+BulkFileUploadFilesPurpose = Literal["retrieval"]
 r"""The intended purpose of the uploaded file."""
 
 
-class FileUploadResponseBodyTypedDict(TypedDict):
-    r"""File uploaded successfully"""
-
+class ResponseBodyTypedDict(TypedDict):
     id: str
     object_name: str
     r"""path to the file in the storage"""
-    purpose: FileUploadPurpose
+    purpose: BulkFileUploadFilesPurpose
     r"""The intended purpose of the uploaded file."""
     bytes: float
     file_name: str
@@ -76,15 +68,13 @@ class FileUploadResponseBodyTypedDict(TypedDict):
     r"""The date and time the resource was created"""
 
 
-class FileUploadResponseBody(BaseModel):
-    r"""File uploaded successfully"""
-
+class ResponseBody(BaseModel):
     id: Annotated[str, pydantic.Field(alias="_id")]
 
     object_name: str
     r"""path to the file in the storage"""
 
-    purpose: FileUploadPurpose
+    purpose: BulkFileUploadFilesPurpose
     r"""The intended purpose of the uploaded file."""
 
     bytes: float

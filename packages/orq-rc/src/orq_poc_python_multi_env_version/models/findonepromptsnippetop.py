@@ -1372,7 +1372,7 @@ class FindOnePromptSnippetResponseBody3(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T10:00:21.083Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")
@@ -2651,7 +2651,7 @@ class FindOnePromptSnippetResponseBody2(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T10:00:21.083Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")
@@ -3947,7 +3947,7 @@ class FindOnePromptSnippetResponseBody1(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T10:00:21.083Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")

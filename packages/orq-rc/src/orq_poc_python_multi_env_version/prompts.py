@@ -196,7 +196,6 @@ class Prompts(BaseSDK):
     def create_version(
         self,
         *,
-        prompt_id: str,
         id: str,
         display_name: str,
         prompt_config: Union[
@@ -216,8 +215,7 @@ class Prompts(BaseSDK):
     ) -> Optional[models.CreatePromptVersionResponseBody]:
         r"""Create a new prompt version
 
-        :param prompt_id: Prompt ID
-        :param id:
+        :param id: Prompt ID
         :param display_name:
         :param prompt_config:
         :param metadata:
@@ -240,9 +238,8 @@ class Prompts(BaseSDK):
             base_url = server_url
 
         request = models.CreatePromptVersionRequest(
-            prompt_id=prompt_id,
+            id=id,
             request_body=models.CreatePromptVersionRequestBody(
-                id=id,
                 display_name=display_name,
                 description=description,
                 prompt_config=utils.get_pydantic_model(
@@ -321,7 +318,6 @@ class Prompts(BaseSDK):
     async def create_version_async(
         self,
         *,
-        prompt_id: str,
         id: str,
         display_name: str,
         prompt_config: Union[
@@ -341,8 +337,7 @@ class Prompts(BaseSDK):
     ) -> Optional[models.CreatePromptVersionResponseBody]:
         r"""Create a new prompt version
 
-        :param prompt_id: Prompt ID
-        :param id:
+        :param id: Prompt ID
         :param display_name:
         :param prompt_config:
         :param metadata:
@@ -365,9 +360,8 @@ class Prompts(BaseSDK):
             base_url = server_url
 
         request = models.CreatePromptVersionRequest(
-            prompt_id=prompt_id,
+            id=id,
             request_body=models.CreatePromptVersionRequestBody(
-                id=id,
                 display_name=display_name,
                 description=description,
                 prompt_config=utils.get_pydantic_model(
@@ -778,7 +772,6 @@ class Prompts(BaseSDK):
     def update(
         self,
         *,
-        prompt_id: str,
         id: str,
         display_name: Optional[str] = None,
         description: OptionalNullable[str] = UNSET,
@@ -798,8 +791,7 @@ class Prompts(BaseSDK):
     ) -> Optional[models.UpdatePromptResponseBody]:
         r"""Update a prompt
 
-        :param prompt_id: Prompt ID
-        :param id:
+        :param id: Prompt ID
         :param display_name:
         :param description:
         :param prompt_config:
@@ -821,9 +813,8 @@ class Prompts(BaseSDK):
             base_url = server_url
 
         request = models.UpdatePromptRequest(
-            prompt_id=prompt_id,
+            id=id,
             request_body=models.UpdatePromptRequestBody(
-                id=id,
                 display_name=display_name,
                 description=description,
                 prompt_config=utils.get_pydantic_model(
@@ -907,7 +898,6 @@ class Prompts(BaseSDK):
     async def update_async(
         self,
         *,
-        prompt_id: str,
         id: str,
         display_name: Optional[str] = None,
         description: OptionalNullable[str] = UNSET,
@@ -927,8 +917,7 @@ class Prompts(BaseSDK):
     ) -> Optional[models.UpdatePromptResponseBody]:
         r"""Update a prompt
 
-        :param prompt_id: Prompt ID
-        :param id:
+        :param id: Prompt ID
         :param display_name:
         :param description:
         :param prompt_config:
@@ -950,9 +939,8 @@ class Prompts(BaseSDK):
             base_url = server_url
 
         request = models.UpdatePromptRequest(
-            prompt_id=prompt_id,
+            id=id,
             request_body=models.UpdatePromptRequestBody(
-                id=id,
                 display_name=display_name,
                 description=description,
                 prompt_config=utils.get_pydantic_model(

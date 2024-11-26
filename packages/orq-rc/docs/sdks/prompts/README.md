@@ -64,7 +64,7 @@ import os
 with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
 ) as s:
-    res = s.prompts.create_version(prompt_id="<id>", id="<id>", display_name="Carolyne.Beahan71", prompt_config={
+    res = s.prompts.create_version(id="<id>", display_name="Carolyne.Beahan71", prompt_config={
         "messages": [
             {
                 "role": "prompt",
@@ -88,8 +88,7 @@ with Orq(
 
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `prompt_id`                                                                               | *str*                                                                                     | :heavy_check_mark:                                                                        | Prompt ID                                                                                 |
-| `id`                                                                                      | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `id`                                                                                      | *str*                                                                                     | :heavy_check_mark:                                                                        | Prompt ID                                                                                 |
 | `display_name`                                                                            | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
 | `prompt_config`                                                                           | [models.CreatePromptVersionPromptConfig](../../models/createpromptversionpromptconfig.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |
 | `metadata`                                                                                | [models.CreatePromptVersionMetadata](../../models/createpromptversionmetadata.md)         | :heavy_check_mark:                                                                        | N/A                                                                                       |
@@ -185,7 +184,7 @@ import os
 with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
 ) as s:
-    res = s.prompts.update(prompt_id="<id>", id="<id>")
+    res = s.prompts.update(id="<id>")
 
     if res is not None:
         # handle response
@@ -197,8 +196,7 @@ with Orq(
 
 | Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `prompt_id`                                                                           | *str*                                                                                 | :heavy_check_mark:                                                                    | Prompt ID                                                                             |
-| `id`                                                                                  | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `id`                                                                                  | *str*                                                                                 | :heavy_check_mark:                                                                    | Prompt ID                                                                             |
 | `display_name`                                                                        | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | N/A                                                                                   |
 | `description`                                                                         | *OptionalNullable[str]*                                                               | :heavy_minus_sign:                                                                    | N/A                                                                                   |
 | `prompt_config`                                                                       | [Optional[models.UpdatePromptPromptConfig]](../../models/updatepromptpromptconfig.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

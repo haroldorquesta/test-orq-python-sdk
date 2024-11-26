@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4fbc8657-7a3a-4200-b91a-5cee84581963
 management:
-  docChecksum: 7d3768ea80519bbb7f1106e2da990778
+  docChecksum: 0ecd56c30ddb07a00266ae405cd39be1
   docVersion: "2.0"
   speakeasyVersion: 1.446.1
   generationVersion: 2.462.1
-  releaseVersion: 1.43.1-rc.13
-  configChecksum: 03289b9c5f1f0255b9a4d09ecac23eab
+  releaseVersion: 1.43.1-rc.14
+  configChecksum: 92ee1fb6d77f771897091b655ebbd908
   repoURL: https://github.com/haroldorquesta/test-orq-python-sdk.git
   repoSubDirectory: packages/orq-rc
   installationURL: https://github.com/haroldorquesta/test-orq-python-sdk.git#subdirectory=packages/orq-rc
@@ -47,6 +47,10 @@ generatedFiles:
   - .vscode/settings.json
   - CONTRIBUTING.md
   - USAGE.md
+  - docs/models/bulkfileuploadfiles.md
+  - docs/models/bulkfileuploadfilespurpose.md
+  - docs/models/bulkfileuploadpurpose.md
+  - docs/models/bulkfileuploadrequestbody.md
   - docs/models/choices.md
   - docs/models/content.md
   - docs/models/content2.md
@@ -909,6 +913,7 @@ generatedFiles:
   - docs/models/remoteconfigsgetconfigrequestbody.md
   - docs/models/remoteconfigsgetconfigresponsebody.md
   - docs/models/remoteconfigsgetconfigtype.md
+  - docs/models/responsebody.md
   - docs/models/responsebody1.md
   - docs/models/responsebody2.md
   - docs/models/responsebody3.md
@@ -1167,6 +1172,7 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/metrics.py
   - src/orq_poc_python_multi_env_version/models/__init__.py
   - src/orq_poc_python_multi_env_version/models/apierror.py
+  - src/orq_poc_python_multi_env_version/models/bulkfileuploadop.py
   - src/orq_poc_python_multi_env_version/models/createcontactop.py
   - src/orq_poc_python_multi_env_version/models/createfeedbackop.py
   - src/orq_poc_python_multi_env_version/models/createpromptop.py
