@@ -35141,7 +35141,7 @@ paths:
       tags:
         - "resources"
       x-speakeasy-group: "dataset"
-      x-speakeasy-name-override: "create"
+      x-speakeasy-name-override: "create2"
       x-speakeasy-ignore: true
       operationId: "CreateDataset"
       security:
