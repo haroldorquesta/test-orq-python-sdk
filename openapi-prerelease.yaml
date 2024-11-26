@@ -2866,7 +2866,7 @@ components:
         "created":
           type: "string"
           format: "date-time"
-          default: "2024-11-25T07:27:21.148Z"
+          default: "2024-11-25T11:22:28.171Z"
           description: "The date and time the resource was created"
           readOnly: true
       required:
@@ -2910,7 +2910,7 @@ components:
           "created":
             type: "string"
             format: "date-time"
-            default: "2024-11-25T07:27:21.148Z"
+            default: "2024-11-25T11:22:28.171Z"
             description: "The date and time the resource was created"
             readOnly: true
         required:
@@ -3145,7 +3145,7 @@ components:
                           - type: "string"
                             format: "date-time"
                           - type: "string"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                         description: "The date and time the resource was created"
                         readOnly: true
                         format: "date-time"
@@ -3153,7 +3153,7 @@ components:
                         anyOf:
                           - type: "string"
                             format: "date-time"
-                            default: "2024-11-25T07:27:20.743Z"
+                            default: "2024-11-25T11:22:27.765Z"
                           - type: "string"
                         description: "The date and time the resource was last updated"
                         readOnly: true
@@ -3174,7 +3174,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -3182,7 +3182,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -3687,7 +3687,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -3695,7 +3695,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -3844,7 +3844,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -3852,7 +3852,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -4276,7 +4276,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -4284,7 +4284,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -4880,7 +4880,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -4888,7 +4888,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -5487,7 +5487,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -5495,7 +5495,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -7039,7 +7039,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -7047,7 +7047,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -7643,7 +7643,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -7651,7 +7651,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -8250,7 +8250,7 @@ components:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -8258,7 +8258,7 @@ components:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -8859,7 +8859,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -8867,7 +8867,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -9463,7 +9463,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -9471,7 +9471,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -10070,7 +10070,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -10078,7 +10078,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -10684,7 +10684,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -10692,7 +10692,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -11288,7 +11288,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -11296,7 +11296,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -11895,7 +11895,7 @@ components:
                 - type: "string"
                   format: "date-time"
                 - type: "string"
-              default: "2024-11-25T07:27:20.743Z"
+              default: "2024-11-25T11:22:27.765Z"
               description: "The date and time the resource was created"
               readOnly: true
               format: "date-time"
@@ -11903,7 +11903,7 @@ components:
               anyOf:
                 - type: "string"
                   format: "date-time"
-                  default: "2024-11-25T07:27:20.743Z"
+                  default: "2024-11-25T11:22:27.765Z"
                 - type: "string"
               description: "The date and time the resource was last updated"
               readOnly: true
@@ -33168,7 +33168,6 @@ paths:
       tags:
         - "Contacts"
       x-speakeasy-name-override: "create"
-      x-internal: true
       operationId: "CreateContact"
       description: "Update or add user information to workspace"
       summary: "Update user information"
@@ -33256,7 +33255,7 @@ paths:
                       - type: "string"
                         format: "date-time"
                       - type: "string"
-                    default: "2024-11-25T07:27:20.743Z"
+                    default: "2024-11-25T11:22:27.765Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                     format: "date-time"
@@ -33264,7 +33263,7 @@ paths:
                     anyOf:
                       - type: "string"
                         format: "date-time"
-                        default: "2024-11-25T07:27:20.743Z"
+                        default: "2024-11-25T11:22:27.765Z"
                       - type: "string"
                     description: "The date and time the resource was last updated"
                     readOnly: true
@@ -35026,7 +35025,7 @@ paths:
                   "created":
                     type: "string"
                     format: "date-time"
-                    default: "2024-11-25T07:27:21.148Z"
+                    default: "2024-11-25T11:22:28.171Z"
                     description: "The date and time the resource was created"
                     readOnly: true
                 required:
@@ -35095,7 +35094,7 @@ paths:
                     "created":
                       type: "string"
                       format: "date-time"
-                      default: "2024-11-25T07:27:21.148Z"
+                      default: "2024-11-25T11:22:28.171Z"
                       description: "The date and time the resource was created"
                       readOnly: true
                   required:
@@ -35106,3 +35105,227 @@ paths:
                     - "file_name"
         "400":
           description: "Bad request"
+  "/v2/resources/datasets": {}
+  "/v2/resources/datasets/{dataset_id}": {}
+  "/v2/resources/datasets/{dataset_id}/rows/bulk": {}
+  "/v2/resources/datasets/{dataset_id}/rows": {}
+  "/v2/resources/datasets/{dataset_id}/rows/{row_id}": {}
+  "/v2/resources/evaluators/templates":
+    get:
+      tags:
+        - "Evaluators"
+      description: "List evaluators templates"
+      summary: "Templates"
+      responses:
+        "200":
+          description: "Successful operation"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "object":
+                    type: "string"
+                    enum:
+                      - "list"
+                  "data":
+                    type: "array"
+                    items:
+                      oneOf:
+                        - type: "object"
+                          properties:
+                            "_id":
+                              type: "string"
+                            "display_name":
+                              type: "string"
+                            "description":
+                              type: "string"
+                            "enabled":
+                              type: "boolean"
+                              default: true
+                            "prompt":
+                              type: "string"
+                            "output_type":
+                              type: "string"
+                              enum:
+                                - "boolean"
+                                - "number"
+                                - "string"
+                                - "enum"
+                            "type":
+                              type: "string"
+                              enum:
+                                - "llm_eval"
+                          required:
+                            - "_id"
+                            - "display_name"
+                            - "description"
+                            - "prompt"
+                            - "output_type"
+                            - "type"
+                        - type: "object"
+                          properties:
+                            "_id":
+                              type: "string"
+                            "display_name":
+                              type: "string"
+                            "description":
+                              type: "string"
+                            "enabled":
+                              type: "boolean"
+                              default: true
+                            "function":
+                              type: "string"
+                              enum:
+                                - "is_valid_json"
+                                - "bert_score"
+                                - "bleu_score"
+                                - "rouge_n"
+                                - "meteor_score"
+                                - "cosine_similarity"
+                                - "levenshtein_distance"
+                                - "exact_match"
+                                - "contains"
+                                - "contains_all"
+                                - "contains_any"
+                                - "contains_email"
+                                - "contains_url"
+                                - "contains_none"
+                                - "contains_valid_link"
+                                - "ends_with"
+                                - "length_between"
+                                - "length_greater_than"
+                                - "length_less_than"
+                                - "moderations_openai"
+                                - "moderations_google"
+                                - "one_line"
+                                - "regex"
+                                - "start_with"
+                            "output_type":
+                              type: "string"
+                              enum:
+                                - "boolean"
+                                - "number"
+                                - "string"
+                                - "enum"
+                            "metadata":
+                              type: "object"
+                              properties:
+                                "required_model_with_tools_support":
+                                  type: "boolean"
+                                "required_retrieval_context":
+                                  type: "boolean"
+                                "required_expected_output":
+                                  type: "boolean"
+                                "supported_on_input_type":
+                                  type: "boolean"
+                                "supported_on_output_type":
+                                  type: "boolean"
+                            "type":
+                              type: "string"
+                              enum:
+                                - "function_eval"
+                          required:
+                            - "_id"
+                            - "display_name"
+                            - "description"
+                            - "function"
+                            - "output_type"
+                            - "type"
+                  "has_more":
+                    type: "boolean"
+                required:
+                  - "object"
+                  - "data"
+                  - "has_more"
+  "/v2/resources/evaluators": {}
+  "/v2/resources/evaluators/{id}":
+    delete:
+      tags:
+        - "evals"
+      x-internal: true
+      summary: "Delete an eval"
+      parameters:
+        - schema:
+            type: "string"
+          required: true
+          name: "id"
+          in: "path"
+      responses:
+        "200":
+          description: "Eval deleted"
+        "404":
+          description: "Workspace ID is not found on the request"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "message":
+                    type: "string"
+                required:
+                  - "message"
+  "/v2/resources/evaluators/{id}/duplicate": {}
+  "/v2/resources/prompts/templates/query": {}
+  "/v2/resources/prompts": {}
+  "/v2/resources/prompts/{id}/versions": {}
+  "/v2/resources/prompts/{id}": {}
+  "/v2/resources/prompts/{id}/duplicate": {}
+  "/v2/resources/prompts/query": {}
+  "/v2/resources/prompts/snippets/{key}": {}
+  "/v2/remoteconfigs":
+    post:
+      tags:
+        - "Remote Config"
+      x-speakeasy-name-override: "getConfig"
+      x-speakeasy-group: "remoteconfig"
+      operationId: "RemoteConfigsGetConfig"
+      summary: "Get Configurations"
+      requestBody:
+        content:
+          "application/json":
+            schema:
+              type: "object"
+              properties:
+                "key":
+                  type: "string"
+                  description: "Remote configuration key"
+                "context":
+                  type: "object"
+                  additionalProperties: {}
+                  description: "Key-value pairs matching your data model, applied to each prompt key."
+                "metadata":
+                  type: "object"
+                  additionalProperties: {}
+                  description: "Key-value pairs to attach to the log generated by this request."
+              required:
+                - "key"
+      responses:
+        "200":
+          description: "An individual remote config"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "type":
+                    type: "string"
+                    enum:
+                      - "boolean"
+                      - "string"
+                      - "integer"
+                      - "decimal"
+                      - "list"
+                      - "json"
+                      - "deployment"
+                  "value": {}
+                required:
+                  - "type"
+        "400":
+          description: "Bad request"
+        "401":
+          description: "Unauthorized"
+        "404":
+          description: "Remote config not found"
+        "500":
+          description: "Internal server error"
