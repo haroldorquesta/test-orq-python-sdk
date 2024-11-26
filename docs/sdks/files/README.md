@@ -18,15 +18,14 @@ Files are used to upload documents that can be used with features like [Deployme
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.files.upload()
 
-res = s.files.upload()
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -57,20 +56,19 @@ Files are used to upload documents that can be used with features like [Deployme
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.files.bulk_upload(files=[
+        {
+            "file_name": "example.file",
+            "content": open("example.file", "rb"),
+        },
+    ], purpose="retrieval")
 
-res = s.files.bulk_upload(files=[
-    {
-        "file_name": "example.file",
-        "content": open("example.file", "rb"),
-    },
-], purpose="retrieval")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 

@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [all](#all) - List all deployments
+* [invalidate](#invalidate) - Invalidates cache
 * [get_config](#get_config) - Get config
 * [invoke](#invoke) - Invoke
 
@@ -19,15 +20,14 @@ Returns a list of your deployments. The deployments are returned sorted by creat
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.all()
 
-res = s.deployments.all()
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -50,6 +50,38 @@ if res is not None:
 | models.HonoAPIError | 500                 | application/json    |
 | models.APIError     | 4XX, 5XX            | \*/\*               |
 
+## invalidate
+
+Explicitly invalidate a cache of a deployment
+
+### Example Usage
+
+```python
+from orq_poc_python_multi_env_version import Orq
+import os
+
+with Orq(
+    api_key=os.getenv("ORQ_API_KEY", ""),
+) as s:
+    s.deployments.invalidate(deployment_id="e1106c66-dcfb-4003-a0e1-3c49405187d4")
+
+    # Use the SDK ...
+
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `deployment_id`                                                     | *str*                                                               | :heavy_check_mark:                                                  | N/A                                                                 |
+| `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| models.APIError | 4XX, 5XX        | \*/\*           |
+
 ## get_config
 
 Retrieve the deployment configuration
@@ -60,15 +92,14 @@ Retrieve the deployment configuration
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.get_config(key="<key>")
 
-res = s.deployments.get_config(key="<key>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -112,16 +143,16 @@ Invoke a deployment with a given payload
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.invoke(key="<key>")
 
-res = s.deployments.invoke(key="<key>")
-
-if res is not None:
-    for event in res:
-        # handle event
-        print(event, flush=True)
+    if res is not None:
+        with res as event_stream:
+            for event in event_stream:
+                # handle event
+                print(event, flush=True)
 
 ```
 

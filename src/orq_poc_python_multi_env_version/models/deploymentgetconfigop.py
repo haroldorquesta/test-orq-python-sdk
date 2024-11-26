@@ -11,13 +11,17 @@ from orq_poc_python_multi_env_version.types import (
 import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Literal, Optional, Union
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
-DeploymentGetConfigInputsTypedDict = Union[str, float, bool]
+DeploymentGetConfigInputsTypedDict = TypeAliasType(
+    "DeploymentGetConfigInputsTypedDict", Union[str, float, bool]
+)
 
 
-DeploymentGetConfigInputs = Union[str, float, bool]
+DeploymentGetConfigInputs = TypeAliasType(
+    "DeploymentGetConfigInputs", Union[str, float, bool]
+)
 
 
 DeploymentGetConfigDeploymentsRole = Literal[
@@ -83,21 +87,28 @@ class DeploymentGetConfig21(BaseModel):
     text: str
 
 
-DeploymentGetConfigContent2TypedDict = Union[
-    DeploymentGetConfig21TypedDict, DeploymentGetConfig22InputTypedDict
-]
+DeploymentGetConfigContent2TypedDict = TypeAliasType(
+    "DeploymentGetConfigContent2TypedDict",
+    Union[DeploymentGetConfig21TypedDict, DeploymentGetConfig22InputTypedDict],
+)
 
 
-DeploymentGetConfigContent2 = Union[DeploymentGetConfig21, DeploymentGetConfig22Input]
+DeploymentGetConfigContent2 = TypeAliasType(
+    "DeploymentGetConfigContent2",
+    Union[DeploymentGetConfig21, DeploymentGetConfig22Input],
+)
 
 
-DeploymentGetConfigContentInputTypedDict = Union[
-    str, List[DeploymentGetConfigContent2TypedDict]
-]
+DeploymentGetConfigContentInputTypedDict = TypeAliasType(
+    "DeploymentGetConfigContentInputTypedDict",
+    Union[str, List[DeploymentGetConfigContent2TypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentGetConfigContentInput = Union[str, List[DeploymentGetConfigContent2]]
+DeploymentGetConfigContentInput = TypeAliasType(
+    "DeploymentGetConfigContentInput", Union[str, List[DeploymentGetConfigContent2]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -215,23 +226,28 @@ class DeploymentGetConfig2Deployments1(BaseModel):
     text: str
 
 
-DeploymentGetConfigContent2InputTypedDict = Union[
-    DeploymentGetConfig2Deployments1TypedDict, DeploymentGetConfig22TypedDict
-]
+DeploymentGetConfigContent2InputTypedDict = TypeAliasType(
+    "DeploymentGetConfigContent2InputTypedDict",
+    Union[DeploymentGetConfig2Deployments1TypedDict, DeploymentGetConfig22TypedDict],
+)
 
 
-DeploymentGetConfigContent2Input = Union[
-    DeploymentGetConfig2Deployments1, DeploymentGetConfig22
-]
+DeploymentGetConfigContent2Input = TypeAliasType(
+    "DeploymentGetConfigContent2Input",
+    Union[DeploymentGetConfig2Deployments1, DeploymentGetConfig22],
+)
 
 
-DeploymentGetConfigContentTypedDict = Union[
-    str, List[DeploymentGetConfigContent2InputTypedDict]
-]
+DeploymentGetConfigContentTypedDict = TypeAliasType(
+    "DeploymentGetConfigContentTypedDict",
+    Union[str, List[DeploymentGetConfigContent2InputTypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentGetConfigContent = Union[str, List[DeploymentGetConfigContent2Input]]
+DeploymentGetConfigContent = TypeAliasType(
+    "DeploymentGetConfigContent", Union[str, List[DeploymentGetConfigContent2Input]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -286,11 +302,15 @@ class DeploymentGetConfigMessages(BaseModel):
     tool_calls: Optional[List[DeploymentGetConfigToolCalls]] = None
 
 
-DeploymentGetConfigUserIDTypedDict = Union[str, float]
+DeploymentGetConfigUserIDTypedDict = TypeAliasType(
+    "DeploymentGetConfigUserIDTypedDict", Union[str, float]
+)
 r"""Unique ID that identifies a user. This is useful for tracking the same user across multiple requests"""
 
 
-DeploymentGetConfigUserID = Union[str, float]
+DeploymentGetConfigUserID = TypeAliasType(
+    "DeploymentGetConfigUserID", Union[str, float]
+)
 r"""Unique ID that identifies a user. This is useful for tracking the same user across multiple requests"""
 
 
@@ -450,26 +470,32 @@ class DeploymentGetConfig2DeploymentsResponse1(BaseModel):
     text: str
 
 
-DeploymentGetConfigContentDeployments2TypedDict = Union[
-    DeploymentGetConfig2DeploymentsResponse1TypedDict,
-    DeploymentGetConfig2Deployments2TypedDict,
-]
+DeploymentGetConfigContentDeployments2TypedDict = TypeAliasType(
+    "DeploymentGetConfigContentDeployments2TypedDict",
+    Union[
+        DeploymentGetConfig2DeploymentsResponse1TypedDict,
+        DeploymentGetConfig2Deployments2TypedDict,
+    ],
+)
 
 
-DeploymentGetConfigContentDeployments2 = Union[
-    DeploymentGetConfig2DeploymentsResponse1, DeploymentGetConfig2Deployments2
-]
+DeploymentGetConfigContentDeployments2 = TypeAliasType(
+    "DeploymentGetConfigContentDeployments2",
+    Union[DeploymentGetConfig2DeploymentsResponse1, DeploymentGetConfig2Deployments2],
+)
 
 
-DeploymentGetConfigDeploymentsContentTypedDict = Union[
-    str, List[DeploymentGetConfigContentDeployments2TypedDict]
-]
+DeploymentGetConfigDeploymentsContentTypedDict = TypeAliasType(
+    "DeploymentGetConfigDeploymentsContentTypedDict",
+    Union[str, List[DeploymentGetConfigContentDeployments2TypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentGetConfigDeploymentsContent = Union[
-    str, List[DeploymentGetConfigContentDeployments2]
-]
+DeploymentGetConfigDeploymentsContent = TypeAliasType(
+    "DeploymentGetConfigDeploymentsContent",
+    Union[str, List[DeploymentGetConfigContentDeployments2]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -526,33 +552,33 @@ class DeploymentGetConfigDeploymentsMessages(BaseModel):
     tool_calls: Optional[List[DeploymentGetConfigDeploymentsResponseToolCalls]] = None
 
 
-Format = Literal["url", "b64_json", "text", "json_object"]
+DeploymentGetConfigFormat = Literal["url", "b64_json", "text", "json_object"]
 r"""Only supported on `image` models."""
 
-Quality = Literal["standard", "hd"]
+DeploymentGetConfigQuality = Literal["standard", "hd"]
 r"""Only supported on `image` models."""
 
 DeploymentGetConfigResponseFormatType = Literal["json_object"]
 
 
-class ResponseFormat2TypedDict(TypedDict):
+class DeploymentGetConfigResponseFormat2TypedDict(TypedDict):
     type: DeploymentGetConfigResponseFormatType
 
 
-class ResponseFormat2(BaseModel):
+class DeploymentGetConfigResponseFormat2(BaseModel):
     type: DeploymentGetConfigResponseFormatType
 
 
-ResponseFormatType = Literal["json_schema"]
+DeploymentGetConfigResponseFormatDeploymentsType = Literal["json_schema"]
 
 
-class JSONSchemaTypedDict(TypedDict):
+class DeploymentGetConfigResponseFormatJSONSchemaTypedDict(TypedDict):
     name: str
     strict: bool
     schema_: Dict[str, Any]
 
 
-class JSONSchema(BaseModel):
+class DeploymentGetConfigResponseFormatJSONSchema(BaseModel):
     name: str
 
     strict: bool
@@ -560,18 +586,24 @@ class JSONSchema(BaseModel):
     schema_: Annotated[Dict[str, Any], pydantic.Field(alias="schema")]
 
 
-class ResponseFormat1TypedDict(TypedDict):
-    type: ResponseFormatType
-    json_schema: JSONSchemaTypedDict
+class DeploymentGetConfigResponseFormat1TypedDict(TypedDict):
+    type: DeploymentGetConfigResponseFormatDeploymentsType
+    json_schema: DeploymentGetConfigResponseFormatJSONSchemaTypedDict
 
 
-class ResponseFormat1(BaseModel):
-    type: ResponseFormatType
+class DeploymentGetConfigResponseFormat1(BaseModel):
+    type: DeploymentGetConfigResponseFormatDeploymentsType
 
-    json_schema: JSONSchema
+    json_schema: DeploymentGetConfigResponseFormatJSONSchema
 
 
-ResponseFormatTypedDict = Union[ResponseFormat2TypedDict, ResponseFormat1TypedDict]
+DeploymentGetConfigResponseFormatTypedDict = TypeAliasType(
+    "DeploymentGetConfigResponseFormatTypedDict",
+    Union[
+        DeploymentGetConfigResponseFormat2TypedDict,
+        DeploymentGetConfigResponseFormat1TypedDict,
+    ],
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -582,7 +614,10 @@ Important: when using JSON mode, you must also instruct the model to produce JSO
 """
 
 
-ResponseFormat = Union[ResponseFormat2, ResponseFormat1]
+DeploymentGetConfigResponseFormat = TypeAliasType(
+    "DeploymentGetConfigResponseFormat",
+    Union[DeploymentGetConfigResponseFormat2, DeploymentGetConfigResponseFormat1],
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -593,10 +628,10 @@ Important: when using JSON mode, you must also instruct the model to produce JSO
 """
 
 
-PhotoRealVersion = Literal["v1", "v2"]
+DeploymentGetConfigPhotoRealVersion = Literal["v1", "v2"]
 r"""The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"""
 
-EncodingFormat = Literal["float", "base64"]
+DeploymentGetConfigEncodingFormat = Literal["float", "base64"]
 r"""The format to return the embeddings"""
 
 
@@ -619,15 +654,15 @@ class ParametersTypedDict(TypedDict):
     r"""Only supported on `image` models."""
     seed: NotRequired[float]
     r"""Best effort deterministic seed for the model. Currently only OpenAI models support these"""
-    format: NotRequired[Format]
+    format: NotRequired[DeploymentGetConfigFormat]
     r"""Only supported on `image` models."""
     dimensions: NotRequired[str]
     r"""Only supported on `image` models."""
-    quality: NotRequired[Quality]
+    quality: NotRequired[DeploymentGetConfigQuality]
     r"""Only supported on `image` models."""
     style: NotRequired[str]
     r"""Only supported on `image` models."""
-    response_format: NotRequired[Nullable[ResponseFormatTypedDict]]
+    response_format: NotRequired[Nullable[DeploymentGetConfigResponseFormatTypedDict]]
     r"""An object specifying the format that the model must output.
 
     Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -636,9 +671,9 @@ class ParametersTypedDict(TypedDict):
 
     Important: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length.
     """
-    photo_real_version: NotRequired[PhotoRealVersion]
+    photo_real_version: NotRequired[DeploymentGetConfigPhotoRealVersion]
     r"""The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"""
-    encoding_format: NotRequired[EncodingFormat]
+    encoding_format: NotRequired[DeploymentGetConfigEncodingFormat]
     r"""The format to return the embeddings"""
 
 
@@ -673,20 +708,21 @@ class Parameters(BaseModel):
     seed: Optional[float] = None
     r"""Best effort deterministic seed for the model. Currently only OpenAI models support these"""
 
-    format: Optional[Format] = None
+    format: Optional[DeploymentGetConfigFormat] = None
     r"""Only supported on `image` models."""
 
     dimensions: Optional[str] = None
     r"""Only supported on `image` models."""
 
-    quality: Optional[Quality] = None
+    quality: Optional[DeploymentGetConfigQuality] = None
     r"""Only supported on `image` models."""
 
     style: Optional[str] = None
     r"""Only supported on `image` models."""
 
     response_format: Annotated[
-        OptionalNullable[ResponseFormat], pydantic.Field(alias="responseFormat")
+        OptionalNullable[DeploymentGetConfigResponseFormat],
+        pydantic.Field(alias="responseFormat"),
     ] = UNSET
     r"""An object specifying the format that the model must output.
 
@@ -698,11 +734,12 @@ class Parameters(BaseModel):
     """
 
     photo_real_version: Annotated[
-        Optional[PhotoRealVersion], pydantic.Field(alias="photoRealVersion")
+        Optional[DeploymentGetConfigPhotoRealVersion],
+        pydantic.Field(alias="photoRealVersion"),
     ] = None
     r"""The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"""
 
-    encoding_format: Optional[EncodingFormat] = None
+    encoding_format: Optional[DeploymentGetConfigEncodingFormat] = None
     r"""The format to return the embeddings"""
 
     @model_serializer(mode="wrap")

@@ -12,9 +12,9 @@ class Feedback(BaseSDK):
     def create(
         self,
         *,
+        field: str,
         value: Union[models.Value, models.ValueTypedDict],
         trace_id: str,
-        property2: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -23,9 +23,9 @@ class Feedback(BaseSDK):
 
         Submit feedback for the LLM transaction via the API
 
+        :param field: A string describing the specific property or aspect rated.
         :param value: The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string.
         :param trace_id: The id returned by the [`get_config`]() or [`invoke`](https://docs.orq.ai/reference/post_deployments-invoke-1) endpoints
-        :param property2: A string describing the specific property or aspect rated.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -42,7 +42,7 @@ class Feedback(BaseSDK):
             base_url = server_url
 
         request = models.CreateFeedbackRequestBody(
-            property2=property2,
+            field=field,
             value=value,
             trace_id=trace_id,
         )
@@ -108,9 +108,9 @@ class Feedback(BaseSDK):
     async def create_async(
         self,
         *,
+        field: str,
         value: Union[models.Value, models.ValueTypedDict],
         trace_id: str,
-        property2: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -119,9 +119,9 @@ class Feedback(BaseSDK):
 
         Submit feedback for the LLM transaction via the API
 
+        :param field: A string describing the specific property or aspect rated.
         :param value: The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string.
         :param trace_id: The id returned by the [`get_config`]() or [`invoke`](https://docs.orq.ai/reference/post_deployments-invoke-1) endpoints
-        :param property2: A string describing the specific property or aspect rated.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -138,7 +138,7 @@ class Feedback(BaseSDK):
             base_url = server_url
 
         request = models.CreateFeedbackRequestBody(
-            property2=property2,
+            field=field,
             value=value,
             trace_id=trace_id,
         )

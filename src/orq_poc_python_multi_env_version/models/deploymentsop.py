@@ -12,7 +12,7 @@ from orq_poc_python_multi_env_version.utils import FieldMetadata, QueryParamMeta
 import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Literal, Optional, Union
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
 class DeploymentsRequestTypedDict(TypedDict):
@@ -118,7 +118,7 @@ class DeploymentsTools(BaseModel):
     id: Optional[float] = None
 
 
-ModelType = Literal[
+DeploymentsModelType = Literal[
     "chat", "completion", "embedding", "vision", "image", "tts", "stt", "rerank"
 ]
 r"""The type of the model"""
@@ -143,13 +143,13 @@ class DeploymentsResponseFormat2(BaseModel):
 DeploymentsResponseFormatDeploymentsType = Literal["json_schema"]
 
 
-class ResponseFormatJSONSchemaTypedDict(TypedDict):
+class DeploymentsResponseFormatJSONSchemaTypedDict(TypedDict):
     name: str
     strict: bool
     schema_: Dict[str, Any]
 
 
-class ResponseFormatJSONSchema(BaseModel):
+class DeploymentsResponseFormatJSONSchema(BaseModel):
     name: str
 
     strict: bool
@@ -159,18 +159,19 @@ class ResponseFormatJSONSchema(BaseModel):
 
 class DeploymentsResponseFormat1TypedDict(TypedDict):
     type: DeploymentsResponseFormatDeploymentsType
-    json_schema: ResponseFormatJSONSchemaTypedDict
+    json_schema: DeploymentsResponseFormatJSONSchemaTypedDict
 
 
 class DeploymentsResponseFormat1(BaseModel):
     type: DeploymentsResponseFormatDeploymentsType
 
-    json_schema: ResponseFormatJSONSchema
+    json_schema: DeploymentsResponseFormatJSONSchema
 
 
-DeploymentsResponseFormatTypedDict = Union[
-    DeploymentsResponseFormat2TypedDict, DeploymentsResponseFormat1TypedDict
-]
+DeploymentsResponseFormatTypedDict = TypeAliasType(
+    "DeploymentsResponseFormatTypedDict",
+    Union[DeploymentsResponseFormat2TypedDict, DeploymentsResponseFormat1TypedDict],
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -181,9 +182,10 @@ Important: when using JSON mode, you must also instruct the model to produce JSO
 """
 
 
-DeploymentsResponseFormat = Union[
-    DeploymentsResponseFormat2, DeploymentsResponseFormat1
-]
+DeploymentsResponseFormat = TypeAliasType(
+    "DeploymentsResponseFormat",
+    Union[DeploymentsResponseFormat2, DeploymentsResponseFormat1],
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -201,7 +203,7 @@ DeploymentsEncodingFormat = Literal["float", "base64"]
 r"""The format to return the embeddings"""
 
 
-class ModelParametersTypedDict(TypedDict):
+class DeploymentsModelParametersTypedDict(TypedDict):
     r"""Model Parameters: Not all parameters apply to every model"""
 
     temperature: NotRequired[float]
@@ -243,7 +245,7 @@ class ModelParametersTypedDict(TypedDict):
     r"""The format to return the embeddings"""
 
 
-class ModelParameters(BaseModel):
+class DeploymentsModelParameters(BaseModel):
     r"""Model Parameters: Not all parameters apply to every model"""
 
     temperature: Optional[float] = None
@@ -440,19 +442,27 @@ class Deployments21(BaseModel):
     text: str
 
 
-DeploymentsContent2TypedDict = Union[
-    Deployments21TypedDict, Deployments2Deployments2TypedDict
-]
+DeploymentsContent2TypedDict = TypeAliasType(
+    "DeploymentsContent2TypedDict",
+    Union[Deployments21TypedDict, Deployments2Deployments2TypedDict],
+)
 
 
-DeploymentsContent2 = Union[Deployments21, Deployments2Deployments2]
+DeploymentsContent2 = TypeAliasType(
+    "DeploymentsContent2", Union[Deployments21, Deployments2Deployments2]
+)
 
 
-DeploymentsDeploymentsContentTypedDict = Union[str, List[DeploymentsContent2TypedDict]]
+DeploymentsDeploymentsContentTypedDict = TypeAliasType(
+    "DeploymentsDeploymentsContentTypedDict",
+    Union[str, List[DeploymentsContent2TypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentsDeploymentsContent = Union[str, List[DeploymentsContent2]]
+DeploymentsDeploymentsContent = TypeAliasType(
+    "DeploymentsDeploymentsContent", Union[str, List[DeploymentsContent2]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -507,26 +517,26 @@ class DeploymentsMessages(BaseModel):
     tool_calls: Optional[List[DeploymentsDeploymentsToolCalls]] = None
 
 
-class PromptConfigTypedDict(TypedDict):
+class DeploymentsPromptConfigTypedDict(TypedDict):
     tools: List[DeploymentsToolsTypedDict]
     model: str
-    model_type: ModelType
+    model_type: DeploymentsModelType
     r"""The type of the model"""
-    model_parameters: ModelParametersTypedDict
+    model_parameters: DeploymentsModelParametersTypedDict
     r"""Model Parameters: Not all parameters apply to every model"""
     provider: DeploymentsProvider
     messages: List[DeploymentsMessagesTypedDict]
 
 
-class PromptConfig(BaseModel):
+class DeploymentsPromptConfig(BaseModel):
     tools: List[DeploymentsTools]
 
     model: str
 
-    model_type: ModelType
+    model_type: DeploymentsModelType
     r"""The type of the model"""
 
-    model_parameters: ModelParameters
+    model_parameters: DeploymentsModelParameters
     r"""Model Parameters: Not all parameters apply to every model"""
 
     provider: DeploymentsProvider
@@ -545,7 +555,7 @@ class DataTypedDict(TypedDict):
     r"""The deployment unique key"""
     description: str
     r"""An arbitrary string attached to the object. Often useful for displaying to users."""
-    prompt_config: PromptConfigTypedDict
+    prompt_config: DeploymentsPromptConfigTypedDict
     version: str
     r"""THe version of the deployment"""
 
@@ -566,7 +576,7 @@ class Data(BaseModel):
     description: str
     r"""An arbitrary string attached to the object. Often useful for displaying to users."""
 
-    prompt_config: PromptConfig
+    prompt_config: DeploymentsPromptConfig
 
     version: str
     r"""THe version of the deployment"""

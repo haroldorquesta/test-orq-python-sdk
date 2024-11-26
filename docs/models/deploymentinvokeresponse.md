@@ -9,9 +9,9 @@
 value: models.DeploymentInvokeResponseBody = /* values here */
 ```
 
-### `Union[Generator[models.DeploymentInvokeDeploymentsResponseBody, None, None], AsyncGenerator[models.DeploymentInvokeDeploymentsResponseBody, None]]`
+### `Union[eventstreaming.EventStream[models.DeploymentInvokeDeploymentsResponseBody], eventstreaming.EventStreamAsync[models.DeploymentInvokeDeploymentsResponseBody]]`
 
 ```python
-value: Union[Generator[models.DeploymentInvokeDeploymentsResponseBody, None, None], AsyncGenerator[models.DeploymentInvokeDeploymentsResponseBody, None]] = /* values here */
+value: Union[eventstreaming.EventStream[models.DeploymentInvokeDeploymentsResponseBody], eventstreaming.EventStreamAsync[models.DeploymentInvokeDeploymentsResponseBody]] = /* values here */
 ```
 

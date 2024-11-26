@@ -11,7 +11,7 @@ from typing import Callable, Dict, Optional, Tuple, Union
 
 
 SERVERS = [
-    "https://my.dev.orq.ai",
+    "https://my.orq.ai",
 ]
 """Contains the list of servers available to the SDK"""
 
@@ -26,10 +26,10 @@ class SDKConfiguration:
     server_idx: Optional[int] = 0
     language: str = "python"
     openapi_doc_version: str = "2.0"
-    sdk_version: str = "1.43.1"
-    gen_version: str = "2.461.4"
+    sdk_version: str = "1.43.3"
+    gen_version: str = "2.462.1"
     user_agent: str = (
-        "speakeasy-sdk/python 1.43.1 2.461.4 2.0 orq-poc-python-multi-env-version"
+        "speakeasy-sdk/python 1.43.3 2.462.1 2.0 orq-poc-python-multi-env-version"
     )
     retry_config: OptionalNullable[RetryConfig] = Field(default_factory=lambda: UNSET)
     timeout_ms: Optional[int] = None

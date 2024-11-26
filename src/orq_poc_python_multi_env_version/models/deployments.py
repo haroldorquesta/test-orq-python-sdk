@@ -3,13 +3,13 @@
 from __future__ import annotations
 from orq_poc_python_multi_env_version.types import BaseModel
 from typing import Any, Dict, List, Literal, Optional, Union
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import NotRequired, TypeAliasType, TypedDict
 
 
-InputsTypedDict = Union[str, float, bool]
+InputsTypedDict = TypeAliasType("InputsTypedDict", Union[str, float, bool])
 
 
-Inputs = Union[str, float, bool]
+Inputs = TypeAliasType("Inputs", Union[str, float, bool])
 
 
 Role = Literal[
@@ -75,17 +75,17 @@ class One(BaseModel):
     text: str
 
 
-TwoTypedDict = Union[OneTypedDict, Two2TypedDict]
+TwoTypedDict = TypeAliasType("TwoTypedDict", Union[OneTypedDict, Two2TypedDict])
 
 
-Two = Union[One, Two2]
+Two = TypeAliasType("Two", Union[One, Two2])
 
 
-ContentTypedDict = Union[str, List[TwoTypedDict]]
+ContentTypedDict = TypeAliasType("ContentTypedDict", Union[str, List[TwoTypedDict]])
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-Content = Union[str, List[Two]]
+Content = TypeAliasType("Content", Union[str, List[Two]])
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -203,17 +203,21 @@ class Two1(BaseModel):
     text: str
 
 
-Content2TypedDict = Union[Two1TypedDict, Deployments22TypedDict]
+Content2TypedDict = TypeAliasType(
+    "Content2TypedDict", Union[Two1TypedDict, Deployments22TypedDict]
+)
 
 
-Content2 = Union[Two1, Deployments22]
+Content2 = TypeAliasType("Content2", Union[Two1, Deployments22])
 
 
-DeploymentsContentTypedDict = Union[str, List[Content2TypedDict]]
+DeploymentsContentTypedDict = TypeAliasType(
+    "DeploymentsContentTypedDict", Union[str, List[Content2TypedDict]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentsContent = Union[str, List[Content2]]
+DeploymentsContent = TypeAliasType("DeploymentsContent", Union[str, List[Content2]])
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -268,11 +272,11 @@ class Messages(BaseModel):
     tool_calls: Optional[List[DeploymentsToolCalls]] = None
 
 
-UserIDTypedDict = Union[str, float]
+UserIDTypedDict = TypeAliasType("UserIDTypedDict", Union[str, float])
 r"""Unique ID that identifies a user. This is useful for tracking the same user across multiple requests"""
 
 
-UserID = Union[str, float]
+UserID = TypeAliasType("UserID", Union[str, float])
 r"""Unique ID that identifies a user. This is useful for tracking the same user across multiple requests"""
 
 

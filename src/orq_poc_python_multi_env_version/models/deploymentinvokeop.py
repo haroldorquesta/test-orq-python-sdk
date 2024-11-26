@@ -9,15 +9,16 @@ from orq_poc_python_multi_env_version.types import (
     UNSET,
     UNSET_SENTINEL,
 )
+from orq_poc_python_multi_env_version.utils import eventstreaming
 from pydantic import model_serializer
-from typing import Any, AsyncGenerator, Generator, List, Literal, Optional, Union
-from typing_extensions import NotRequired, TypedDict
+from typing import Any, List, Literal, Optional, Union
+from typing_extensions import NotRequired, TypeAliasType, TypedDict
 
 
 DeploymentInvokeDeploymentsObject = Literal["chat", "completion", "image"]
 r"""Indicates the type of model used to generate the response"""
 
-DeploymentInvokeProvider = Literal[
+DeploymentInvokeDeploymentsProvider = Literal[
     "cohere",
     "openai",
     "anthropic",
@@ -209,18 +210,24 @@ class DeploymentInvokeMessageDeployments1(BaseModel):
         return m
 
 
-DeploymentInvokeDeploymentsMessageTypedDict = Union[
-    DeploymentInvokeMessageDeployments2TypedDict,
-    DeploymentInvokeMessage3TypedDict,
-    DeploymentInvokeMessageDeployments1TypedDict,
-]
+DeploymentInvokeDeploymentsMessageTypedDict = TypeAliasType(
+    "DeploymentInvokeDeploymentsMessageTypedDict",
+    Union[
+        DeploymentInvokeMessageDeployments2TypedDict,
+        DeploymentInvokeMessage3TypedDict,
+        DeploymentInvokeMessageDeployments1TypedDict,
+    ],
+)
 
 
-DeploymentInvokeDeploymentsMessage = Union[
-    DeploymentInvokeMessageDeployments2,
-    DeploymentInvokeMessage3,
-    DeploymentInvokeMessageDeployments1,
-]
+DeploymentInvokeDeploymentsMessage = TypeAliasType(
+    "DeploymentInvokeDeploymentsMessage",
+    Union[
+        DeploymentInvokeMessageDeployments2,
+        DeploymentInvokeMessage3,
+        DeploymentInvokeMessageDeployments1,
+    ],
+)
 
 
 class DeploymentInvokeDeploymentsChoicesTypedDict(TypedDict):
@@ -267,7 +274,7 @@ class DeploymentInvokeDeploymentsChoices(BaseModel):
         return m
 
 
-class DeploymentInvokeMetadataTypedDict(TypedDict):
+class DeploymentInvokeDeploymentsMetadataTypedDict(TypedDict):
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
     file_name: str
@@ -282,7 +289,7 @@ class DeploymentInvokeMetadataTypedDict(TypedDict):
     r"""Rerank scores are normalized to be in the range [0, 1]. Scores close to 1 indicate a high relevance to the query, and scores closer to 0 indicate low relevance. It is not accurate to assume a score of 0.9 means the document is 2x more relevant than a document with a score of 0.45"""
 
 
-class DeploymentInvokeMetadata(BaseModel):
+class DeploymentInvokeDeploymentsMetadata(BaseModel):
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
     file_name: str
@@ -334,7 +341,7 @@ class DeploymentInvokeMetadata(BaseModel):
 class DeploymentInvokeRetrievalsTypedDict(TypedDict):
     document: str
     r"""Content of the retrieved chunk from the knowledge base"""
-    metadata: DeploymentInvokeMetadataTypedDict
+    metadata: DeploymentInvokeDeploymentsMetadataTypedDict
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
 
@@ -342,7 +349,7 @@ class DeploymentInvokeRetrievals(BaseModel):
     document: str
     r"""Content of the retrieved chunk from the knowledge base"""
 
-    metadata: DeploymentInvokeMetadata
+    metadata: DeploymentInvokeDeploymentsMetadata
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
 
@@ -355,7 +362,7 @@ class DeploymentInvokeDataTypedDict(TypedDict):
     r"""Indicates the type of model used to generate the response"""
     model: NotRequired[str]
     r"""The model used to generate the response"""
-    provider: NotRequired[DeploymentInvokeProvider]
+    provider: NotRequired[DeploymentInvokeDeploymentsProvider]
     r"""The provider used to generate the response"""
     is_final: NotRequired[bool]
     r"""Indicates if the response is the final response"""
@@ -386,7 +393,7 @@ class DeploymentInvokeData(BaseModel):
     model: Optional[str] = None
     r"""The model used to generate the response"""
 
-    provider: Optional[DeploymentInvokeProvider] = None
+    provider: Optional[DeploymentInvokeDeploymentsProvider] = None
     r"""The provider used to generate the response"""
 
     is_final: Optional[bool] = None
@@ -469,7 +476,7 @@ class DeploymentInvokeDeploymentsResponseBody(BaseModel):
 DeploymentInvokeObject = Literal["chat", "completion", "image"]
 r"""Indicates the type of model used to generate the response"""
 
-Provider = Literal[
+DeploymentInvokeProvider = Literal[
     "cohere",
     "openai",
     "anthropic",
@@ -661,16 +668,20 @@ class DeploymentInvokeMessage1(BaseModel):
         return m
 
 
-DeploymentInvokeMessageTypedDict = Union[
-    DeploymentInvokeMessage2TypedDict,
-    Message3TypedDict,
-    DeploymentInvokeMessage1TypedDict,
-]
+DeploymentInvokeMessageTypedDict = TypeAliasType(
+    "DeploymentInvokeMessageTypedDict",
+    Union[
+        DeploymentInvokeMessage2TypedDict,
+        Message3TypedDict,
+        DeploymentInvokeMessage1TypedDict,
+    ],
+)
 
 
-DeploymentInvokeMessage = Union[
-    DeploymentInvokeMessage2, Message3, DeploymentInvokeMessage1
-]
+DeploymentInvokeMessage = TypeAliasType(
+    "DeploymentInvokeMessage",
+    Union[DeploymentInvokeMessage2, Message3, DeploymentInvokeMessage1],
+)
 
 
 class DeploymentInvokeChoicesTypedDict(TypedDict):
@@ -717,7 +728,7 @@ class DeploymentInvokeChoices(BaseModel):
         return m
 
 
-class MetadataTypedDict(TypedDict):
+class DeploymentInvokeMetadataTypedDict(TypedDict):
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
     file_name: str
@@ -732,7 +743,7 @@ class MetadataTypedDict(TypedDict):
     r"""Rerank scores are normalized to be in the range [0, 1]. Scores close to 1 indicate a high relevance to the query, and scores closer to 0 indicate low relevance. It is not accurate to assume a score of 0.9 means the document is 2x more relevant than a document with a score of 0.45"""
 
 
-class Metadata(BaseModel):
+class DeploymentInvokeMetadata(BaseModel):
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
     file_name: str
@@ -784,7 +795,7 @@ class Metadata(BaseModel):
 class RetrievalsTypedDict(TypedDict):
     document: str
     r"""Content of the retrieved chunk from the knowledge base"""
-    metadata: MetadataTypedDict
+    metadata: DeploymentInvokeMetadataTypedDict
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
 
@@ -792,7 +803,7 @@ class Retrievals(BaseModel):
     document: str
     r"""Content of the retrieved chunk from the knowledge base"""
 
-    metadata: Metadata
+    metadata: DeploymentInvokeMetadata
     r"""Metadata of the retrieved chunk from the knowledge base"""
 
 
@@ -807,7 +818,7 @@ class DeploymentInvokeResponseBodyTypedDict(TypedDict):
     r"""Indicates the type of model used to generate the response"""
     model: str
     r"""The model used to generate the response"""
-    provider: Provider
+    provider: DeploymentInvokeProvider
     r"""The provider used to generate the response"""
     is_final: bool
     r"""Indicates if the response is the final response"""
@@ -840,7 +851,7 @@ class DeploymentInvokeResponseBody(BaseModel):
     model: str
     r"""The model used to generate the response"""
 
-    provider: Provider
+    provider: DeploymentInvokeProvider
     r"""The provider used to generate the response"""
 
     is_final: bool
@@ -901,19 +912,29 @@ class DeploymentInvokeResponseBody(BaseModel):
         return m
 
 
-DeploymentInvokeResponseTypedDict = Union[
-    DeploymentInvokeResponseBodyTypedDict,
+DeploymentInvokeResponseTypedDict = TypeAliasType(
+    "DeploymentInvokeResponseTypedDict",
     Union[
-        Generator[DeploymentInvokeDeploymentsResponseBodyTypedDict, None, None],
-        AsyncGenerator[DeploymentInvokeDeploymentsResponseBodyTypedDict, None],
+        DeploymentInvokeResponseBodyTypedDict,
+        Union[
+            eventstreaming.EventStream[
+                DeploymentInvokeDeploymentsResponseBodyTypedDict
+            ],
+            eventstreaming.EventStreamAsync[
+                DeploymentInvokeDeploymentsResponseBodyTypedDict
+            ],
+        ],
     ],
-]
+)
 
 
-DeploymentInvokeResponse = Union[
-    DeploymentInvokeResponseBody,
+DeploymentInvokeResponse = TypeAliasType(
+    "DeploymentInvokeResponse",
     Union[
-        Generator[DeploymentInvokeDeploymentsResponseBody, None, None],
-        AsyncGenerator[DeploymentInvokeDeploymentsResponseBody, None],
+        DeploymentInvokeResponseBody,
+        Union[
+            eventstreaming.EventStream[DeploymentInvokeDeploymentsResponseBody],
+            eventstreaming.EventStreamAsync[DeploymentInvokeDeploymentsResponseBody],
+        ],
     ],
-]
+)
