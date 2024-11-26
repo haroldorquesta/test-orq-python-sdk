@@ -3,7 +3,7 @@
 import importlib.metadata
 
 __title__: str = "orq-poc-python-multi-env-version"
-__version__: str = "1.43.1-rc.12"
+__version__: str = "1.43.1-rc.13"
 
 try:
     if __package__ is not None:

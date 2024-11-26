@@ -572,13 +572,13 @@ class DeploymentGetConfigResponseFormat2(BaseModel):
 DeploymentGetConfigResponseFormatDeploymentsType = Literal["json_schema"]
 
 
-class ResponseFormatJSONSchemaTypedDict(TypedDict):
+class DeploymentGetConfigResponseFormatJSONSchemaTypedDict(TypedDict):
     name: str
     strict: bool
     schema_: Dict[str, Any]
 
 
-class ResponseFormatJSONSchema(BaseModel):
+class DeploymentGetConfigResponseFormatJSONSchema(BaseModel):
     name: str
 
     strict: bool
@@ -588,13 +588,13 @@ class ResponseFormatJSONSchema(BaseModel):
 
 class DeploymentGetConfigResponseFormat1TypedDict(TypedDict):
     type: DeploymentGetConfigResponseFormatDeploymentsType
-    json_schema: ResponseFormatJSONSchemaTypedDict
+    json_schema: DeploymentGetConfigResponseFormatJSONSchemaTypedDict
 
 
 class DeploymentGetConfigResponseFormat1(BaseModel):
     type: DeploymentGetConfigResponseFormatDeploymentsType
 
-    json_schema: ResponseFormatJSONSchema
+    json_schema: DeploymentGetConfigResponseFormatJSONSchema
 
 
 DeploymentGetConfigResponseFormatTypedDict = TypeAliasType(

@@ -6,8 +6,10 @@
 ### Available Operations
 
 * [create](#create) - Create a new prompt
+* [create_version](#create_version) - Create a new prompt version
 * [delete](#delete) - Delete a prompt
 * [get_one](#get_one) - Get one prompt
+* [update](#update) - Update a prompt
 * [duplicate](#duplicate) - Duplicate a prompt
 * [get_all](#get_all) - Get all prompts
 
@@ -42,6 +44,63 @@ with Orq(
 ### Response
 
 **[models.CreatePromptResponseBody](../../models/createpromptresponsebody.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| models.APIError | 4XX, 5XX        | \*/\*           |
+
+## create_version
+
+Create a new prompt version
+
+### Example Usage
+
+```python
+from orq_poc_python_multi_env_version import Orq
+import os
+
+with Orq(
+    api_key=os.getenv("ORQ_API_KEY", ""),
+) as s:
+    res = s.prompts.create_version(prompt_id="<id>", id="<id>", display_name="Carolyne.Beahan71", prompt_config={
+        "messages": [
+            {
+                "role": "prompt",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "<value>",
+                    },
+                ],
+            },
+        ],
+    }, metadata={}, commit="<value>", timestamp="<value>")
+
+    if res is not None:
+        # handle response
+        pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `prompt_id`                                                                               | *str*                                                                                     | :heavy_check_mark:                                                                        | Prompt ID                                                                                 |
+| `id`                                                                                      | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `display_name`                                                                            | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `prompt_config`                                                                           | [models.CreatePromptVersionPromptConfig](../../models/createpromptversionpromptconfig.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `metadata`                                                                                | [models.CreatePromptVersionMetadata](../../models/createpromptversionmetadata.md)         | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `commit`                                                                                  | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `timestamp`                                                                               | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `description`                                                                             | *OptionalNullable[str]*                                                                   | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `retries`                                                                                 | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                          | :heavy_minus_sign:                                                                        | Configuration to override the default retry behavior of the client.                       |
+
+### Response
+
+**[models.CreatePromptVersionResponseBody](../../models/createpromptversionresponsebody.md)**
 
 ### Errors
 
@@ -112,6 +171,51 @@ with Orq(
 | Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | models.APIError | 4XX, 5XX        | \*/\*           |
+
+## update
+
+Update a prompt
+
+### Example Usage
+
+```python
+from orq_poc_python_multi_env_version import Orq
+import os
+
+with Orq(
+    api_key=os.getenv("ORQ_API_KEY", ""),
+) as s:
+    res = s.prompts.update(prompt_id="<id>", id="<id>")
+
+    if res is not None:
+        # handle response
+        pass
+
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `prompt_id`                                                                           | *str*                                                                                 | :heavy_check_mark:                                                                    | Prompt ID                                                                             |
+| `id`                                                                                  | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `display_name`                                                                        | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `description`                                                                         | *OptionalNullable[str]*                                                               | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `prompt_config`                                                                       | [Optional[models.UpdatePromptPromptConfig]](../../models/updatepromptpromptconfig.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `metadata`                                                                            | [Optional[models.UpdatePromptMetadata]](../../models/updatepromptmetadata.md)         | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `key`                                                                                 | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `retries`                                                                             | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                      | :heavy_minus_sign:                                                                    | Configuration to override the default retry behavior of the client.                   |
+
+### Response
+
+**[models.UpdatePromptResponseBody](../../models/updatepromptresponsebody.md)**
+
+### Errors
+
+| Error Type                             | Status Code                            | Content Type                           |
+| -------------------------------------- | -------------------------------------- | -------------------------------------- |
+| models.UpdatePromptPromptsResponseBody | 404                                    | application/json                       |
+| models.APIError                        | 4XX, 5XX                               | \*/\*                                  |
 
 ## duplicate
 

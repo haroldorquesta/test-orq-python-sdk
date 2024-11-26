@@ -11,15 +11,15 @@ Important: when using JSON mode, you must also instruct the model to produce JSO
 
 ## Supported Types
 
-### `models.FindOnePromptSnippetResponseFormatPromptSnippetsResponse1`
+### `models.FindOnePromptSnippetResponseFormatPromptSnippets1`
 
 ```python
-value: models.FindOnePromptSnippetResponseFormatPromptSnippetsResponse1 = /* values here */
+value: models.FindOnePromptSnippetResponseFormatPromptSnippets1 = /* values here */
 ```
 
-### `models.FindOnePromptSnippetResponseFormatPromptSnippetsResponse2`
+### `models.FindOnePromptSnippetResponseFormatPromptSnippets2`
 
 ```python
-value: models.FindOnePromptSnippetResponseFormatPromptSnippetsResponse2 = /* values here */
+value: models.FindOnePromptSnippetResponseFormatPromptSnippets2 = /* values here */
 ```
 

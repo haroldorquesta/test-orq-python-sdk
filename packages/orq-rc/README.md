@@ -158,8 +158,10 @@ asyncio.run(main())
 ### [prompts](docs/sdks/prompts/README.md)
 
 * [create](docs/sdks/prompts/README.md#create) - Create a new prompt
+* [create_version](docs/sdks/prompts/README.md#create_version) - Create a new prompt version
 * [delete](docs/sdks/prompts/README.md#delete) - Delete a prompt
 * [get_one](docs/sdks/prompts/README.md#get_one) - Get one prompt
+* [update](docs/sdks/prompts/README.md#update) - Update a prompt
 * [duplicate](docs/sdks/prompts/README.md#duplicate) - Duplicate a prompt
 * [get_all](docs/sdks/prompts/README.md#get_all) - Get all prompts
 

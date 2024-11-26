@@ -5,21 +5,21 @@ Prompt snippet retrieved.
 
 ## Supported Types
 
-### `models.ResponseBody1`
+### `models.FindOnePromptSnippetResponseBody1`
 
 ```python
-value: models.ResponseBody1 = /* values here */
+value: models.FindOnePromptSnippetResponseBody1 = /* values here */
 ```
 
-### `models.ResponseBody2`
+### `models.FindOnePromptSnippetResponseBody2`
 
 ```python
-value: models.ResponseBody2 = /* values here */
+value: models.FindOnePromptSnippetResponseBody2 = /* values here */
 ```
 
-### `models.ResponseBody3`
+### `models.FindOnePromptSnippetResponseBody3`
 
 ```python
-value: models.ResponseBody3 = /* values here */
+value: models.FindOnePromptSnippetResponseBody3 = /* values here */
 ```
 

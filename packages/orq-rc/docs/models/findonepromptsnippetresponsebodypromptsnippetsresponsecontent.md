@@ -11,9 +11,9 @@ The contents of the user message. Either the text content of the message or an a
 value: str = /* values here */
 ```
 
-### `List[models.FindOnePromptSnippetContentPromptSnippetsResponse2002]`
+### `List[models.FindOnePromptSnippetContentPromptSnippetsResponse2]`
 
 ```python
-value: List[models.FindOnePromptSnippetContentPromptSnippetsResponse2002] = /* values here */
+value: List[models.FindOnePromptSnippetContentPromptSnippetsResponse2] = /* values here */
 ```
 

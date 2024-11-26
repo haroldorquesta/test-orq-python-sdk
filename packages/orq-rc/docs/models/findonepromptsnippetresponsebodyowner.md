@@ -9,9 +9,9 @@
 value: str = /* values here */
 ```
 
-### `models.FindOnePromptSnippetOwnerPromptSnippets2`
+### `models.FindOnePromptSnippetOwner2`
 
 ```python
-value: models.FindOnePromptSnippetOwnerPromptSnippets2 = /* values here */
+value: models.FindOnePromptSnippetOwner2 = /* values here */
 ```
 
