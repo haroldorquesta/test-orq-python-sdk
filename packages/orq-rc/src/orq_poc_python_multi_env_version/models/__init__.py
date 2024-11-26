@@ -109,10 +109,6 @@ from .createpromptop import (
     ResponseFormatType,
     ResponseFormatTypedDict,
 )
-from .delete_v2_deployments_invalidate_deployment_id_op import (
-    DeleteV2DeploymentsInvalidateDeploymentIDRequest,
-    DeleteV2DeploymentsInvalidateDeploymentIDRequestTypedDict,
-)
 from .deletepromptop import DeletePromptRequest, DeletePromptRequestTypedDict
 from .deploymentcreatemetricop import (
     Choices,
@@ -717,24 +713,6 @@ from .findonepromptsnippetop import (
     ResponseBodyVersionsTypedDict,
     Versions,
     VersionsTypedDict,
-)
-from .get_v2_resources_evaluators_templatesop import (
-    Data1,
-    Data1TypedDict,
-    Data2,
-    Data2TypedDict,
-    DataFunction,
-    DataMetadata,
-    DataMetadataTypedDict,
-    DataOutputType,
-    DataType,
-    GetV2ResourcesEvaluatorsTemplatesData,
-    GetV2ResourcesEvaluatorsTemplatesDataType,
-    GetV2ResourcesEvaluatorsTemplatesDataTypedDict,
-    GetV2ResourcesEvaluatorsTemplatesObject,
-    GetV2ResourcesEvaluatorsTemplatesResponseBody,
-    GetV2ResourcesEvaluatorsTemplatesResponseBodyTypedDict,
-    OutputType,
 )
 from .getallpromptsop import (
     Filters4,
@@ -1342,6 +1320,10 @@ from .getallprompttemplatesop import (
 )
 from .getonepromptop import GetOnePromptRequest, GetOnePromptRequestTypedDict
 from .honoapierror import HonoAPIError, HonoAPIErrorData
+from .invaliddeploymentop import (
+    InvalidDeploymentRequest,
+    InvalidDeploymentRequestTypedDict,
+)
 from .remoteconfigsgetconfigop import (
     RemoteConfigsGetConfigRequestBody,
     RemoteConfigsGetConfigRequestBodyTypedDict,
@@ -1439,20 +1421,9 @@ __all__ = [
     "CreatePromptToolCallsTypedDict",
     "CreatePromptType",
     "Data",
-    "Data1",
-    "Data1TypedDict",
-    "Data2",
-    "Data2TypedDict",
-    "DataFunction",
-    "DataMetadata",
-    "DataMetadataTypedDict",
-    "DataOutputType",
-    "DataType",
     "DataTypedDict",
     "DeletePromptRequest",
     "DeletePromptRequestTypedDict",
-    "DeleteV2DeploymentsInvalidateDeploymentIDRequest",
-    "DeleteV2DeploymentsInvalidateDeploymentIDRequestTypedDict",
     "DeploymentCreateMetric21",
     "DeploymentCreateMetric21TypedDict",
     "DeploymentCreateMetric22",
@@ -2507,18 +2478,14 @@ __all__ = [
     "GetAllPromptsResponseFormatType",
     "GetOnePromptRequest",
     "GetOnePromptRequestTypedDict",
-    "GetV2ResourcesEvaluatorsTemplatesData",
-    "GetV2ResourcesEvaluatorsTemplatesDataType",
-    "GetV2ResourcesEvaluatorsTemplatesDataTypedDict",
-    "GetV2ResourcesEvaluatorsTemplatesObject",
-    "GetV2ResourcesEvaluatorsTemplatesResponseBody",
-    "GetV2ResourcesEvaluatorsTemplatesResponseBodyTypedDict",
     "HonoAPIError",
     "HonoAPIErrorData",
     "ImageURL",
     "ImageURLTypedDict",
     "Inputs",
     "InputsTypedDict",
+    "InvalidDeploymentRequest",
+    "InvalidDeploymentRequestTypedDict",
     "InvokeOptions",
     "InvokeOptionsTypedDict",
     "Items",
@@ -2584,7 +2551,6 @@ __all__ = [
     "One",
     "OneTypedDict",
     "Operator",
-    "OutputType",
     "Owner",
     "Owner2",
     "OwnerTypedDict",

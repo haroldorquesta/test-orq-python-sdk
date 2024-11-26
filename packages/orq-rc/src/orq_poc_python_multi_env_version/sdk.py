@@ -10,7 +10,6 @@ from orq_poc_python_multi_env_version import models, utils
 from orq_poc_python_multi_env_version._hooks import SDKHooks
 from orq_poc_python_multi_env_version.contacts import Contacts
 from orq_poc_python_multi_env_version.deployments_sdk import DeploymentsSDK
-from orq_poc_python_multi_env_version.evaluators import Evaluators
 from orq_poc_python_multi_env_version.feedback import Feedback
 from orq_poc_python_multi_env_version.files import Files
 from orq_poc_python_multi_env_version.prompt import Prompt
@@ -29,7 +28,6 @@ class Orq(BaseSDK):
     feedback: Feedback
     deployments: DeploymentsSDK
     files: Files
-    evaluators: Evaluators
     prompt: Prompt
     prompts: Prompts
     remoteconfig: Remoteconfig
@@ -117,7 +115,6 @@ class Orq(BaseSDK):
         self.feedback = Feedback(self.sdk_configuration)
         self.deployments = DeploymentsSDK(self.sdk_configuration)
         self.files = Files(self.sdk_configuration)
-        self.evaluators = Evaluators(self.sdk_configuration)
         self.prompt = Prompt(self.sdk_configuration)
         self.prompts = Prompts(self.sdk_configuration)
         self.remoteconfig = Remoteconfig(self.sdk_configuration)

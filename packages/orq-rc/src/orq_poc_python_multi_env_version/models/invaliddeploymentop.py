@@ -6,11 +6,11 @@ from orq_poc_python_multi_env_version.utils import FieldMetadata, PathParamMetad
 from typing_extensions import Annotated, TypedDict
 
 
-class DeleteV2DeploymentsInvalidateDeploymentIDRequestTypedDict(TypedDict):
+class InvalidDeploymentRequestTypedDict(TypedDict):
     deployment_id: str
 
 
-class DeleteV2DeploymentsInvalidateDeploymentIDRequest(BaseModel):
+class InvalidDeploymentRequest(BaseModel):
     deployment_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]

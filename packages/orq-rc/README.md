@@ -127,17 +127,13 @@ asyncio.run(main())
 ### [deployments](docs/sdks/deploymentssdk/README.md)
 
 * [all](docs/sdks/deploymentssdk/README.md#all) - List all deployments
+* [invalidate](docs/sdks/deploymentssdk/README.md#invalidate) - Invalidates cache
 * [get_config](docs/sdks/deploymentssdk/README.md#get_config) - Get config
 * [invoke](docs/sdks/deploymentssdk/README.md#invoke) - Invoke
-* [delete_v2_deployments_invalidate_deployment_id_](docs/sdks/deploymentssdk/README.md#delete_v2_deployments_invalidate_deployment_id_) - Invalidates cache
 
 #### [deployments.metrics](docs/sdks/metrics/README.md)
 
 * [create](docs/sdks/metrics/README.md#create) - Add metrics
-
-### [evaluators](docs/sdks/evaluators/README.md)
-
-* [get_v2_resources_evaluators_templates](docs/sdks/evaluators/README.md#get_v2_resources_evaluators_templates) - Templates
 
 ### [feedback](docs/sdks/feedback/README.md)
 

@@ -1330,7 +1330,7 @@ class ResponseBody3(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:01:20.782Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")
@@ -2583,7 +2583,7 @@ class ResponseBody2(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:01:20.782Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")
@@ -3844,7 +3844,7 @@ class ResponseBody1(BaseModel):
     created: Optional[datetime] = None
     r"""The date and time the resource was created"""
 
-    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:01:20.782Z")
+    updated: Optional[datetime] = dateutil.parser.isoparse("2024-11-26T03:17:57.484Z")
     r"""The date and time the resource was last updated"""
 
     @model_serializer(mode="wrap")

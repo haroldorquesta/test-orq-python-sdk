@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4fbc8657-7a3a-4200-b91a-5cee84581963
 management:
-  docChecksum: fc64b4b3b3ecfb9da02563b67e7f8a56
+  docChecksum: 1b5eba1b23ea4d2669cb13cc7e46fa63
   docVersion: "2.0"
   speakeasyVersion: 1.446.0
   generationVersion: 2.462.0
-  releaseVersion: 1.43.1-rc.9
-  configChecksum: 0ed6f2dcce727d0b74e784b050161977
+  releaseVersion: 1.43.1-rc.11
+  configChecksum: 423de6371d61665b7e56b6a4b09a68d1
   repoURL: https://github.com/haroldorquesta/test-orq-python-sdk.git
   repoSubDirectory: packages/orq-rc
   installationURL: https://github.com/haroldorquesta/test-orq-python-sdk.git#subdirectory=packages/orq-rc
@@ -100,14 +100,7 @@ generatedFiles:
   - docs/models/createprompttoolcalls.md
   - docs/models/createprompttype.md
   - docs/models/data.md
-  - docs/models/data1.md
-  - docs/models/data2.md
-  - docs/models/datafunction.md
-  - docs/models/datametadata.md
-  - docs/models/dataoutputtype.md
-  - docs/models/datatype.md
   - docs/models/deletepromptrequest.md
-  - docs/models/deletev2deploymentsinvalidatedeploymentidrequest.md
   - docs/models/deploymentcreatemetric21.md
   - docs/models/deploymentcreatemetric22.md
   - docs/models/deploymentcreatemetric2deploymentsmetricstype.md
@@ -779,13 +772,10 @@ generatedFiles:
   - docs/models/getallprompttemplatesresponseformatprompttemplatestype.md
   - docs/models/getallprompttemplatesresponseformattype.md
   - docs/models/getonepromptrequest.md
-  - docs/models/getv2resourcesevaluatorstemplatesdata.md
-  - docs/models/getv2resourcesevaluatorstemplatesdatatype.md
-  - docs/models/getv2resourcesevaluatorstemplatesobject.md
-  - docs/models/getv2resourcesevaluatorstemplatesresponsebody.md
   - docs/models/honoapierror.md
   - docs/models/imageurl.md
   - docs/models/inputs.md
+  - docs/models/invaliddeploymentrequest.md
   - docs/models/invokeoptions.md
   - docs/models/items.md
   - docs/models/items1.md
@@ -825,7 +815,6 @@ generatedFiles:
   - docs/models/object.md
   - docs/models/one.md
   - docs/models/operator.md
-  - docs/models/outputtype.md
   - docs/models/owner.md
   - docs/models/owner2.md
   - docs/models/parameters.md
@@ -884,7 +873,6 @@ generatedFiles:
   - docs/models/versions.md
   - docs/sdks/contacts/README.md
   - docs/sdks/deploymentssdk/README.md
-  - docs/sdks/evaluators/README.md
   - docs/sdks/feedback/README.md
   - docs/sdks/files/README.md
   - docs/sdks/metrics/README.md
@@ -908,7 +896,6 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/basesdk.py
   - src/orq_poc_python_multi_env_version/contacts.py
   - src/orq_poc_python_multi_env_version/deployments_sdk.py
-  - src/orq_poc_python_multi_env_version/evaluators.py
   - src/orq_poc_python_multi_env_version/feedback.py
   - src/orq_poc_python_multi_env_version/files.py
   - src/orq_poc_python_multi_env_version/httpclient.py
@@ -918,7 +905,6 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/models/createcontactop.py
   - src/orq_poc_python_multi_env_version/models/createfeedbackop.py
   - src/orq_poc_python_multi_env_version/models/createpromptop.py
-  - src/orq_poc_python_multi_env_version/models/delete_v2_deployments_invalidate_deployment_id_op.py
   - src/orq_poc_python_multi_env_version/models/deletepromptop.py
   - src/orq_poc_python_multi_env_version/models/deploymentcreatemetricop.py
   - src/orq_poc_python_multi_env_version/models/deploymentgetconfigop.py
@@ -928,11 +914,11 @@ generatedFiles:
   - src/orq_poc_python_multi_env_version/models/duplicatepromptop.py
   - src/orq_poc_python_multi_env_version/models/fileuploadop.py
   - src/orq_poc_python_multi_env_version/models/findonepromptsnippetop.py
-  - src/orq_poc_python_multi_env_version/models/get_v2_resources_evaluators_templatesop.py
   - src/orq_poc_python_multi_env_version/models/getallpromptsop.py
   - src/orq_poc_python_multi_env_version/models/getallprompttemplatesop.py
   - src/orq_poc_python_multi_env_version/models/getonepromptop.py
   - src/orq_poc_python_multi_env_version/models/honoapierror.py
+  - src/orq_poc_python_multi_env_version/models/invaliddeploymentop.py
   - src/orq_poc_python_multi_env_version/models/remoteconfigsgetconfigop.py
   - src/orq_poc_python_multi_env_version/models/security.py
   - src/orq_poc_python_multi_env_version/prompt.py
@@ -1077,4 +1063,9 @@ examples:
       responses:
         "200":
           application/json: {"count": "4610.08", "page": "592.16", "limit": "5984.80", "totalPages": "6512.03", "items": []}
+  InvalidDeployment:
+    speakeasy-default-invalid-deployment:
+      parameters:
+        path:
+          deployment_id: "e1106c66-dcfb-4003-a0e1-3c49405187d4"
 generatedTests: {}
