@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 from orq_poc_python_multi_env_version.types import BaseModel
-from typing import List, Optional, Union
-from typing_extensions import NotRequired, TypeAliasType, TypedDict
+import pydantic
+from typing import List, Union
+from typing_extensions import Annotated, TypeAliasType, TypedDict
 
 
 ValueTypedDict = TypeAliasType("ValueTypedDict", Union[str, List[str]])
@@ -17,25 +18,25 @@ r"""The feedback value. For single selection of multiple choice, the value shoul
 class CreateFeedbackRequestBodyTypedDict(TypedDict):
     r"""Feedback submission payload"""
 
+    field: str
+    r"""A string describing the specific property or aspect rated."""
     value: ValueTypedDict
     r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
     trace_id: str
     r"""The id returned by the [`get_config`]() or [`invoke`](https://docs.orq.ai/reference/post_deployments-invoke-1) endpoints"""
-    property2: NotRequired[str]
-    r"""A string describing the specific property or aspect rated."""
 
 
 class CreateFeedbackRequestBody(BaseModel):
     r"""Feedback submission payload"""
+
+    field: Annotated[str, pydantic.Field(alias="property")]
+    r"""A string describing the specific property or aspect rated."""
 
     value: Value
     r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
 
     trace_id: str
     r"""The id returned by the [`get_config`]() or [`invoke`](https://docs.orq.ai/reference/post_deployments-invoke-1) endpoints"""
-
-    property2: Optional[str] = None
-    r"""A string describing the specific property or aspect rated."""
 
 
 CreateFeedbackValueTypedDict = TypeAliasType(
@@ -51,17 +52,20 @@ r"""The feedback value. For single selection of multiple choice, the value shoul
 class CreateFeedbackResponseBodyTypedDict(TypedDict):
     r"""Successful operation"""
 
+    property: str
+    r"""A string describing the specific property or aspect rated."""
     value: CreateFeedbackValueTypedDict
     r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
     trace_id: str
     r"""The id returned by the [`get_config`]() or [`invoke`](https://docs.orq.ai/reference/post_deployments-invoke-1) endpoints"""
     id: str
-    property2: NotRequired[str]
-    r"""A string describing the specific property or aspect rated."""
 
 
 class CreateFeedbackResponseBody(BaseModel):
     r"""Successful operation"""
+
+    property: str
+    r"""A string describing the specific property or aspect rated."""
 
     value: CreateFeedbackValue
     r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
@@ -70,6 +74,3 @@ class CreateFeedbackResponseBody(BaseModel):
     r"""The id returned by the [`get_config`]() or [`invoke`](https://docs.orq.ai/reference/post_deployments-invoke-1) endpoints"""
 
     id: str
-
-    property2: Optional[str] = None
-    r"""A string describing the specific property or aspect rated."""

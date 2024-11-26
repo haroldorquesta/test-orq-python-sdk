@@ -89,3 +89,13 @@ Based on:
 - [python v1.43.1-rc.11] packages/orq-rc
 ### Releases
 - [PyPI v1.43.1-rc.11] https://pypi.org/project/orq-poc-python-multi-env-version/1.43.1-rc.11 - packages/orq-rc
+
+## 2024-11-26 08:26:39
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.446.1 (2.462.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v1.43.1-rc.12] packages/orq-rc
+### Releases
+- [PyPI v1.43.1-rc.12] https://pypi.org/project/orq-poc-python-multi-env-version/1.43.1-rc.12 - packages/orq-rc

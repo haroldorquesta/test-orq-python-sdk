@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4fbc8657-7a3a-4200-b91a-5cee84581963
 management:
-  docChecksum: 1b5eba1b23ea4d2669cb13cc7e46fa63
+  docChecksum: 428101a37e7294483f22f57b9c4ba803
   docVersion: "2.0"
-  speakeasyVersion: 1.446.0
-  generationVersion: 2.462.0
-  releaseVersion: 1.43.1-rc.11
-  configChecksum: 423de6371d61665b7e56b6a4b09a68d1
+  speakeasyVersion: 1.446.1
+  generationVersion: 2.462.1
+  releaseVersion: 1.43.1-rc.12
+  configChecksum: 6d5c3d2d27b6d92fe68d7389d14ec5e3
   repoURL: https://github.com/haroldorquesta/test-orq-python-sdk.git
   repoSubDirectory: packages/orq-rc
   installationURL: https://github.com/haroldorquesta/test-orq-python-sdk.git#subdirectory=packages/orq-rc
@@ -37,7 +37,7 @@ features:
     responseFormat: 1.0.1
     retries: 3.0.2
     sdkHooks: 1.0.0
-    serverEvents: 1.0.5
+    serverEvents: 1.0.6
     serverEventsSentinels: 0.1.0
     unions: 3.0.4
     uploadStreams: 1.0.0
@@ -957,10 +957,10 @@ examples:
   CreateFeedback:
     "":
       requestBody:
-        application/json: {"property2": "rating", "value": ["good"], "trace_id": "67HTZ65Z9W91HSF51CW68KK1QH"}
+        application/json: {"property": "rating", "value": ["good"], "trace_id": "67HTZ65Z9W91HSF51CW68KK1QH"}
       responses:
         "200":
-          application/json: {"value": "<value>", "trace_id": "<id>", "id": "<id>"}
+          application/json: {"property": "<value>", "value": "<value>", "trace_id": "<id>", "id": "<id>"}
   Deployments:
     speakeasy-default-deployments:
       responses:
