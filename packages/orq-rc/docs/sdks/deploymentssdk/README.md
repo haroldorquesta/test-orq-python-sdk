@@ -19,15 +19,14 @@ Returns a list of your deployments. The deployments are returned sorted by creat
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.all()
 
-res = s.deployments.all()
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -60,15 +59,14 @@ Retrieve the deployment configuration
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.get_config(key="<key>")
 
-res = s.deployments.get_config(key="<key>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -112,16 +110,16 @@ Invoke a deployment with a given payload
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.invoke(key="<key>")
 
-res = s.deployments.invoke(key="<key>")
-
-if res is not None:
-    for event in res:
-        # handle event
-        print(event, flush=True)
+    if res is not None:
+        with res as event_stream:
+            for event in event_stream:
+                # handle event
+                print(event, flush=True)
 
 ```
 

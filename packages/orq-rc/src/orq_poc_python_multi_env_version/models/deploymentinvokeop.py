@@ -9,9 +9,10 @@ from orq_poc_python_multi_env_version.types import (
     UNSET,
     UNSET_SENTINEL,
 )
+from orq_poc_python_multi_env_version.utils import eventstreaming
 from pydantic import model_serializer
-from typing import Any, AsyncGenerator, Generator, List, Literal, Optional, Union
-from typing_extensions import NotRequired, TypedDict
+from typing import Any, List, Literal, Optional, Union
+from typing_extensions import NotRequired, TypeAliasType, TypedDict
 
 
 DeploymentInvokeDeploymentsObject = Literal["chat", "completion", "image"]
@@ -209,18 +210,24 @@ class DeploymentInvokeMessageDeployments1(BaseModel):
         return m
 
 
-DeploymentInvokeDeploymentsMessageTypedDict = Union[
-    DeploymentInvokeMessageDeployments2TypedDict,
-    DeploymentInvokeMessage3TypedDict,
-    DeploymentInvokeMessageDeployments1TypedDict,
-]
+DeploymentInvokeDeploymentsMessageTypedDict = TypeAliasType(
+    "DeploymentInvokeDeploymentsMessageTypedDict",
+    Union[
+        DeploymentInvokeMessageDeployments2TypedDict,
+        DeploymentInvokeMessage3TypedDict,
+        DeploymentInvokeMessageDeployments1TypedDict,
+    ],
+)
 
 
-DeploymentInvokeDeploymentsMessage = Union[
-    DeploymentInvokeMessageDeployments2,
-    DeploymentInvokeMessage3,
-    DeploymentInvokeMessageDeployments1,
-]
+DeploymentInvokeDeploymentsMessage = TypeAliasType(
+    "DeploymentInvokeDeploymentsMessage",
+    Union[
+        DeploymentInvokeMessageDeployments2,
+        DeploymentInvokeMessage3,
+        DeploymentInvokeMessageDeployments1,
+    ],
+)
 
 
 class DeploymentInvokeDeploymentsChoicesTypedDict(TypedDict):
@@ -661,16 +668,20 @@ class DeploymentInvokeMessage1(BaseModel):
         return m
 
 
-DeploymentInvokeMessageTypedDict = Union[
-    DeploymentInvokeMessage2TypedDict,
-    Message3TypedDict,
-    DeploymentInvokeMessage1TypedDict,
-]
+DeploymentInvokeMessageTypedDict = TypeAliasType(
+    "DeploymentInvokeMessageTypedDict",
+    Union[
+        DeploymentInvokeMessage2TypedDict,
+        Message3TypedDict,
+        DeploymentInvokeMessage1TypedDict,
+    ],
+)
 
 
-DeploymentInvokeMessage = Union[
-    DeploymentInvokeMessage2, Message3, DeploymentInvokeMessage1
-]
+DeploymentInvokeMessage = TypeAliasType(
+    "DeploymentInvokeMessage",
+    Union[DeploymentInvokeMessage2, Message3, DeploymentInvokeMessage1],
+)
 
 
 class DeploymentInvokeChoicesTypedDict(TypedDict):
@@ -901,19 +912,29 @@ class DeploymentInvokeResponseBody(BaseModel):
         return m
 
 
-DeploymentInvokeResponseTypedDict = Union[
-    DeploymentInvokeResponseBodyTypedDict,
+DeploymentInvokeResponseTypedDict = TypeAliasType(
+    "DeploymentInvokeResponseTypedDict",
     Union[
-        Generator[DeploymentInvokeDeploymentsResponseBodyTypedDict, None, None],
-        AsyncGenerator[DeploymentInvokeDeploymentsResponseBodyTypedDict, None],
+        DeploymentInvokeResponseBodyTypedDict,
+        Union[
+            eventstreaming.EventStream[
+                DeploymentInvokeDeploymentsResponseBodyTypedDict
+            ],
+            eventstreaming.EventStreamAsync[
+                DeploymentInvokeDeploymentsResponseBodyTypedDict
+            ],
+        ],
     ],
-]
+)
 
 
-DeploymentInvokeResponse = Union[
-    DeploymentInvokeResponseBody,
+DeploymentInvokeResponse = TypeAliasType(
+    "DeploymentInvokeResponse",
     Union[
-        Generator[DeploymentInvokeDeploymentsResponseBody, None, None],
-        AsyncGenerator[DeploymentInvokeDeploymentsResponseBody, None],
+        DeploymentInvokeResponseBody,
+        Union[
+            eventstreaming.EventStream[DeploymentInvokeDeploymentsResponseBody],
+            eventstreaming.EventStreamAsync[DeploymentInvokeDeploymentsResponseBody],
+        ],
     ],
-]
+)

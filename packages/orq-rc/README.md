@@ -81,15 +81,14 @@ Generally, the SDK will work well with most IDEs out of the box. However, when u
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.contacts.create(external_id="<id>")
 
-res = s.contacts.create(external_id="<id>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 ```
 
 </br>
@@ -102,13 +101,14 @@ from orq_poc_python_multi_env_version import Orq
 import os
 
 async def main():
-    s = Orq(
+    async with Orq(
         api_key=os.getenv("ORQ_API_KEY", ""),
-    )
-    res = await s.contacts.create_async(external_id="<id>")
-    if res is not None:
-        # handle response
-        pass
+    ) as s:
+        res = await s.contacts.create_async(external_id="<id>")
+
+        if res is not None:
+            # handle response
+            pass
 
 asyncio.run(main())
 ```
@@ -134,6 +134,14 @@ asyncio.run(main())
 
 * [create](docs/sdks/metrics/README.md#create) - Add metrics
 
+### [evals](docs/sdks/evals/README.md)
+
+* [delete_v2_resources_evaluators_id_](docs/sdks/evals/README.md#delete_v2_resources_evaluators_id_) - Delete an eval
+
+### [evaluators](docs/sdks/evaluators/README.md)
+
+* [get_v2_resources_evaluators_templates](docs/sdks/evaluators/README.md#get_v2_resources_evaluators_templates) - Templates
+
 ### [feedback](docs/sdks/feedback/README.md)
 
 * [create](docs/sdks/feedback/README.md#create) - Submit feedback
@@ -143,6 +151,10 @@ asyncio.run(main())
 * [upload](docs/sdks/files/README.md#upload) - Upload file
 * [bulk_upload](docs/sdks/files/README.md#bulk_upload) - Bulk upload file
 
+
+### [remoteconfig](docs/sdks/remoteconfig/README.md)
+
+* [get_config](docs/sdks/remoteconfig/README.md#get_config) - Get Configurations
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
@@ -154,27 +166,31 @@ asyncio.run(main())
 operations. These operations will expose the stream as [Generator][generator] that
 can be consumed using a simple `for` loop. The loop will
 terminate when the server no longer has any events to send and closes the
-underlying connection.
+underlying connection.  
+
+The stream is also a [Context Manager][context-manager] and can be used with the `with` statement and will close the
+underlying connection when the context is exited.
 
 ```python
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.invoke(key="<key>")
 
-res = s.deployments.invoke(key="<key>")
-
-if res is not None:
-    for event in res:
-        # handle event
-        print(event, flush=True)
+    if res is not None:
+        with res as event_stream:
+            for event in event_stream:
+                # handle event
+                print(event, flush=True)
 
 ```
 
 [mdn-sse]: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events
-[generator]: https://wiki.python.org/moin/Generators
+[generator]: https://book.pythontips.com/en/latest/generators.html
+[context-manager]: https://book.pythontips.com/en/latest/context_managers.html
 <!-- End Server-sent event streaming [eventstream] -->
 
 <!-- Start File uploads [file-upload] -->
@@ -191,15 +207,14 @@ Certain SDK methods accept file objects as part of a request body or multi-part 
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.files.upload()
 
-res = s.files.upload()
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 <!-- End File uploads [file-upload] -->
@@ -215,16 +230,15 @@ from orq.utils import BackoffStrategy, RetryConfig
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.contacts.create(external_id="<id>",
+        RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
 
-res = s.contacts.create(external_id="<id>",
-    RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -234,16 +248,15 @@ from orq.utils import BackoffStrategy, RetryConfig
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.contacts.create(external_id="<id>")
 
-res = s.contacts.create(external_id="<id>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 <!-- End Retries [retries] -->
@@ -275,24 +288,23 @@ When custom error responses are specified for an operation, the SDK may also rai
 from orq_poc_python_multi_env_version import Orq, models
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = None
+    try:
+        res = s.deployments.all()
 
-res = None
-try:
-    res = s.deployments.all()
+        if res is not None:
+            # handle response
+            pass
 
-    if res is not None:
-        # handle response
-        pass
-
-except models.HonoAPIError as e:
-    # handle e.data: models.HonoAPIErrorData
-    raise(e)
-except models.APIError as e:
-    # handle exception
-    raise(e)
+    except models.HonoAPIError as e:
+        # handle e.data: models.HonoAPIErrorData
+        raise(e)
+    except models.APIError as e:
+        # handle exception
+        raise(e)
 ```
 <!-- End Error Handling [errors] -->
 
@@ -306,16 +318,15 @@ The default server can also be overridden globally by passing a URL to the `serv
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     server_url="https://my.dev.orq.ai",
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.contacts.create(external_id="<id>")
 
-res = s.contacts.create(external_id="<id>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 <!-- End Server Selection [server] -->
@@ -417,15 +428,14 @@ To authenticate with the API the `api_key` parameter must be set when initializi
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.contacts.create(external_id="<id>")
 
-res = s.contacts.create(external_id="<id>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 <!-- End Authentication [security] -->

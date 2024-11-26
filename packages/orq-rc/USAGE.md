@@ -4,15 +4,14 @@
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.contacts.create(external_id="<id>")
 
-res = s.contacts.create(external_id="<id>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 ```
 
 </br>
@@ -25,13 +24,14 @@ from orq_poc_python_multi_env_version import Orq
 import os
 
 async def main():
-    s = Orq(
+    async with Orq(
         api_key=os.getenv("ORQ_API_KEY", ""),
-    )
-    res = await s.contacts.create_async(external_id="<id>")
-    if res is not None:
-        # handle response
-        pass
+    ) as s:
+        res = await s.contacts.create_async(external_id="<id>")
+
+        if res is not None:
+            # handle response
+            pass
 
 asyncio.run(main())
 ```

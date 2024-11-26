@@ -15,7 +15,7 @@ from orq_poc_python_multi_env_version.utils import (
 )
 from pydantic import model_serializer
 from typing import Any, Dict, List, Literal, Optional, Union
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
 class UsageTypedDict(TypedDict):
@@ -120,23 +120,28 @@ class DeploymentCreateMetric21(BaseModel):
     text: str
 
 
-DeploymentCreateMetricContent2TypedDict = Union[
-    DeploymentCreateMetric21TypedDict, DeploymentCreateMetric22TypedDict
-]
+DeploymentCreateMetricContent2TypedDict = TypeAliasType(
+    "DeploymentCreateMetricContent2TypedDict",
+    Union[DeploymentCreateMetric21TypedDict, DeploymentCreateMetric22TypedDict],
+)
 
 
-DeploymentCreateMetricContent2 = Union[
-    DeploymentCreateMetric21, DeploymentCreateMetric22
-]
+DeploymentCreateMetricContent2 = TypeAliasType(
+    "DeploymentCreateMetricContent2",
+    Union[DeploymentCreateMetric21, DeploymentCreateMetric22],
+)
 
 
-DeploymentCreateMetricContentTypedDict = Union[
-    str, List[DeploymentCreateMetricContent2TypedDict]
-]
+DeploymentCreateMetricContentTypedDict = TypeAliasType(
+    "DeploymentCreateMetricContentTypedDict",
+    Union[str, List[DeploymentCreateMetricContent2TypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentCreateMetricContent = Union[str, List[DeploymentCreateMetricContent2]]
+DeploymentCreateMetricContent = TypeAliasType(
+    "DeploymentCreateMetricContent", Union[str, List[DeploymentCreateMetricContent2]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -364,10 +369,12 @@ class Message1(BaseModel):
         return m
 
 
-MessageTypedDict = Union[Message2TypedDict, ThreeTypedDict, Message1TypedDict]
+MessageTypedDict = TypeAliasType(
+    "MessageTypedDict", Union[Message2TypedDict, ThreeTypedDict, Message1TypedDict]
+)
 
 
-Message = Union[Message2, Three, Message1]
+Message = TypeAliasType("Message", Union[Message2, Three, Message1])
 
 
 class ChoicesTypedDict(TypedDict):

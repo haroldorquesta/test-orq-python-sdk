@@ -1,12 +1,12 @@
-speakeasyVersion: 1.444.4
+speakeasyVersion: 1.446.0
 sources:
     orq-test2-prerelease-python:
         sourceNamespace: orq-test2-prerelease-python
-        sourceRevisionDigest: sha256:877797757ed8559184780349c660e47bf4f2ef1d9b2dc4dfe6aebc2811fd3672
-        sourceBlobDigest: sha256:efa13c440770d3dccbf0d06ea600db785cdab1915e0fd26a8389c7fc7b929032
+        sourceRevisionDigest: sha256:05557c98d98dd80cf4041ea1595ee4c139f70a6d35834328909dca5887a3f21d
+        sourceBlobDigest: sha256:ce3d51108db783b73711b50b57743c11ce3c2b9ab1fe073c01a42aedeacef969
         tags:
             - latest
-            - speakeasy-sdk-regen-1732543317
+            - speakeasy-sdk-regen-1732588737
             - "2.0"
     orq-test2-python:
         sourceNamespace: orq-test2-python
@@ -20,10 +20,10 @@ targets:
     orq-test2-prerelease-python:
         source: orq-test2-prerelease-python
         sourceNamespace: orq-test2-prerelease-python
-        sourceRevisionDigest: sha256:877797757ed8559184780349c660e47bf4f2ef1d9b2dc4dfe6aebc2811fd3672
-        sourceBlobDigest: sha256:efa13c440770d3dccbf0d06ea600db785cdab1915e0fd26a8389c7fc7b929032
+        sourceRevisionDigest: sha256:05557c98d98dd80cf4041ea1595ee4c139f70a6d35834328909dca5887a3f21d
+        sourceBlobDigest: sha256:ce3d51108db783b73711b50b57743c11ce3c2b9ab1fe073c01a42aedeacef969
         codeSamplesNamespace: orq-test2-prerelease-python-code-samples
-        codeSamplesRevisionDigest: sha256:105414659e004a7f0ce81ce37a89b99d7169251eee31432d87c9903d7096d4ee
+        codeSamplesRevisionDigest: sha256:34d91fb94f2d63616e0f337330812b549f2eb3586b48cc9b638b46254abd9430
     orq-test2-python:
         source: orq-test2-python
         sourceNamespace: orq-test2-python

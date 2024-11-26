@@ -679,7 +679,7 @@ class DeploymentsSDK(BaseSDK):
                 http_response_text, Optional[models.DeploymentInvokeResponseBody]
             )
         if utils.match_response(http_res, "200", "text/event-stream"):
-            return eventstreaming.stream_events(
+            return eventstreaming.EventStream(
                 http_res,
                 lambda raw: utils.unmarshal_json(
                     raw, models.DeploymentInvokeDeploymentsResponseBody
@@ -841,7 +841,7 @@ class DeploymentsSDK(BaseSDK):
                 http_response_text, Optional[models.DeploymentInvokeResponseBody]
             )
         if utils.match_response(http_res, "200", "text/event-stream"):
-            return eventstreaming.stream_events_async(
+            return eventstreaming.EventStreamAsync(
                 http_res,
                 lambda raw: utils.unmarshal_json(
                     raw, models.DeploymentInvokeDeploymentsResponseBody

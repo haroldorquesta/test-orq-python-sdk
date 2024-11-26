@@ -12,7 +12,7 @@ from orq_poc_python_multi_env_version.utils import FieldMetadata, QueryParamMeta
 import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Literal, Optional, Union
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
 class DeploymentsRequestTypedDict(TypedDict):
@@ -168,9 +168,10 @@ class DeploymentsResponseFormat1(BaseModel):
     json_schema: ResponseFormatJSONSchema
 
 
-DeploymentsResponseFormatTypedDict = Union[
-    DeploymentsResponseFormat2TypedDict, DeploymentsResponseFormat1TypedDict
-]
+DeploymentsResponseFormatTypedDict = TypeAliasType(
+    "DeploymentsResponseFormatTypedDict",
+    Union[DeploymentsResponseFormat2TypedDict, DeploymentsResponseFormat1TypedDict],
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -181,9 +182,10 @@ Important: when using JSON mode, you must also instruct the model to produce JSO
 """
 
 
-DeploymentsResponseFormat = Union[
-    DeploymentsResponseFormat2, DeploymentsResponseFormat1
-]
+DeploymentsResponseFormat = TypeAliasType(
+    "DeploymentsResponseFormat",
+    Union[DeploymentsResponseFormat2, DeploymentsResponseFormat1],
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -440,19 +442,27 @@ class Deployments21(BaseModel):
     text: str
 
 
-DeploymentsContent2TypedDict = Union[
-    Deployments21TypedDict, Deployments2Deployments2TypedDict
-]
+DeploymentsContent2TypedDict = TypeAliasType(
+    "DeploymentsContent2TypedDict",
+    Union[Deployments21TypedDict, Deployments2Deployments2TypedDict],
+)
 
 
-DeploymentsContent2 = Union[Deployments21, Deployments2Deployments2]
+DeploymentsContent2 = TypeAliasType(
+    "DeploymentsContent2", Union[Deployments21, Deployments2Deployments2]
+)
 
 
-DeploymentsDeploymentsContentTypedDict = Union[str, List[DeploymentsContent2TypedDict]]
+DeploymentsDeploymentsContentTypedDict = TypeAliasType(
+    "DeploymentsDeploymentsContentTypedDict",
+    Union[str, List[DeploymentsContent2TypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentsDeploymentsContent = Union[str, List[DeploymentsContent2]]
+DeploymentsDeploymentsContent = TypeAliasType(
+    "DeploymentsDeploymentsContent", Union[str, List[DeploymentsContent2]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 

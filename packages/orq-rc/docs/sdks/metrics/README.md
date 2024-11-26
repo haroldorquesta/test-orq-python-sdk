@@ -17,15 +17,14 @@ Add metrics to a deployment
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.deployments.metrics.create(id="<id>")
 
-res = s.deployments.metrics.create(id="<id>")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 

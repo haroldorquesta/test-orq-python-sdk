@@ -3,14 +3,14 @@
 from __future__ import annotations
 from orq_poc_python_multi_env_version.types import BaseModel
 from typing import List, Optional, Union
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import NotRequired, TypeAliasType, TypedDict
 
 
-ValueTypedDict = Union[str, List[str]]
+ValueTypedDict = TypeAliasType("ValueTypedDict", Union[str, List[str]])
 r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
 
 
-Value = Union[str, List[str]]
+Value = TypeAliasType("Value", Union[str, List[str]])
 r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
 
 
@@ -38,11 +38,13 @@ class CreateFeedbackRequestBody(BaseModel):
     r"""A string describing the specific property or aspect rated."""
 
 
-CreateFeedbackValueTypedDict = Union[str, List[str]]
+CreateFeedbackValueTypedDict = TypeAliasType(
+    "CreateFeedbackValueTypedDict", Union[str, List[str]]
+)
 r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
 
 
-CreateFeedbackValue = Union[str, List[str]]
+CreateFeedbackValue = TypeAliasType("CreateFeedbackValue", Union[str, List[str]])
 r"""The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string."""
 
 

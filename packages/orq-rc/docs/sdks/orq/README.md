@@ -6,3 +6,5 @@
 
 orq.ai Documentation
 <https://docs.orq.ai>
+
+### Available Operations

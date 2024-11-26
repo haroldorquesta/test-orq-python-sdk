@@ -11,13 +11,17 @@ from orq_poc_python_multi_env_version.types import (
 import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Literal, Optional, Union
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
-DeploymentGetConfigInputsTypedDict = Union[str, float, bool]
+DeploymentGetConfigInputsTypedDict = TypeAliasType(
+    "DeploymentGetConfigInputsTypedDict", Union[str, float, bool]
+)
 
 
-DeploymentGetConfigInputs = Union[str, float, bool]
+DeploymentGetConfigInputs = TypeAliasType(
+    "DeploymentGetConfigInputs", Union[str, float, bool]
+)
 
 
 DeploymentGetConfigDeploymentsRole = Literal[
@@ -83,21 +87,28 @@ class DeploymentGetConfig21(BaseModel):
     text: str
 
 
-DeploymentGetConfigContent2TypedDict = Union[
-    DeploymentGetConfig21TypedDict, DeploymentGetConfig22InputTypedDict
-]
+DeploymentGetConfigContent2TypedDict = TypeAliasType(
+    "DeploymentGetConfigContent2TypedDict",
+    Union[DeploymentGetConfig21TypedDict, DeploymentGetConfig22InputTypedDict],
+)
 
 
-DeploymentGetConfigContent2 = Union[DeploymentGetConfig21, DeploymentGetConfig22Input]
+DeploymentGetConfigContent2 = TypeAliasType(
+    "DeploymentGetConfigContent2",
+    Union[DeploymentGetConfig21, DeploymentGetConfig22Input],
+)
 
 
-DeploymentGetConfigContentInputTypedDict = Union[
-    str, List[DeploymentGetConfigContent2TypedDict]
-]
+DeploymentGetConfigContentInputTypedDict = TypeAliasType(
+    "DeploymentGetConfigContentInputTypedDict",
+    Union[str, List[DeploymentGetConfigContent2TypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentGetConfigContentInput = Union[str, List[DeploymentGetConfigContent2]]
+DeploymentGetConfigContentInput = TypeAliasType(
+    "DeploymentGetConfigContentInput", Union[str, List[DeploymentGetConfigContent2]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -215,23 +226,28 @@ class DeploymentGetConfig2Deployments1(BaseModel):
     text: str
 
 
-DeploymentGetConfigContent2InputTypedDict = Union[
-    DeploymentGetConfig2Deployments1TypedDict, DeploymentGetConfig22TypedDict
-]
+DeploymentGetConfigContent2InputTypedDict = TypeAliasType(
+    "DeploymentGetConfigContent2InputTypedDict",
+    Union[DeploymentGetConfig2Deployments1TypedDict, DeploymentGetConfig22TypedDict],
+)
 
 
-DeploymentGetConfigContent2Input = Union[
-    DeploymentGetConfig2Deployments1, DeploymentGetConfig22
-]
+DeploymentGetConfigContent2Input = TypeAliasType(
+    "DeploymentGetConfigContent2Input",
+    Union[DeploymentGetConfig2Deployments1, DeploymentGetConfig22],
+)
 
 
-DeploymentGetConfigContentTypedDict = Union[
-    str, List[DeploymentGetConfigContent2InputTypedDict]
-]
+DeploymentGetConfigContentTypedDict = TypeAliasType(
+    "DeploymentGetConfigContentTypedDict",
+    Union[str, List[DeploymentGetConfigContent2InputTypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentGetConfigContent = Union[str, List[DeploymentGetConfigContent2Input]]
+DeploymentGetConfigContent = TypeAliasType(
+    "DeploymentGetConfigContent", Union[str, List[DeploymentGetConfigContent2Input]]
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -286,11 +302,15 @@ class DeploymentGetConfigMessages(BaseModel):
     tool_calls: Optional[List[DeploymentGetConfigToolCalls]] = None
 
 
-DeploymentGetConfigUserIDTypedDict = Union[str, float]
+DeploymentGetConfigUserIDTypedDict = TypeAliasType(
+    "DeploymentGetConfigUserIDTypedDict", Union[str, float]
+)
 r"""Unique ID that identifies a user. This is useful for tracking the same user across multiple requests"""
 
 
-DeploymentGetConfigUserID = Union[str, float]
+DeploymentGetConfigUserID = TypeAliasType(
+    "DeploymentGetConfigUserID", Union[str, float]
+)
 r"""Unique ID that identifies a user. This is useful for tracking the same user across multiple requests"""
 
 
@@ -450,26 +470,32 @@ class DeploymentGetConfig2DeploymentsResponse1(BaseModel):
     text: str
 
 
-DeploymentGetConfigContentDeployments2TypedDict = Union[
-    DeploymentGetConfig2DeploymentsResponse1TypedDict,
-    DeploymentGetConfig2Deployments2TypedDict,
-]
+DeploymentGetConfigContentDeployments2TypedDict = TypeAliasType(
+    "DeploymentGetConfigContentDeployments2TypedDict",
+    Union[
+        DeploymentGetConfig2DeploymentsResponse1TypedDict,
+        DeploymentGetConfig2Deployments2TypedDict,
+    ],
+)
 
 
-DeploymentGetConfigContentDeployments2 = Union[
-    DeploymentGetConfig2DeploymentsResponse1, DeploymentGetConfig2Deployments2
-]
+DeploymentGetConfigContentDeployments2 = TypeAliasType(
+    "DeploymentGetConfigContentDeployments2",
+    Union[DeploymentGetConfig2DeploymentsResponse1, DeploymentGetConfig2Deployments2],
+)
 
 
-DeploymentGetConfigDeploymentsContentTypedDict = Union[
-    str, List[DeploymentGetConfigContentDeployments2TypedDict]
-]
+DeploymentGetConfigDeploymentsContentTypedDict = TypeAliasType(
+    "DeploymentGetConfigDeploymentsContentTypedDict",
+    Union[str, List[DeploymentGetConfigContentDeployments2TypedDict]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
-DeploymentGetConfigDeploymentsContent = Union[
-    str, List[DeploymentGetConfigContentDeployments2]
-]
+DeploymentGetConfigDeploymentsContent = TypeAliasType(
+    "DeploymentGetConfigDeploymentsContent",
+    Union[str, List[DeploymentGetConfigContentDeployments2]],
+)
 r"""The contents of the user message. Either the text content of the message or an array of content parts with a defined type, each can be of type `text` or `image_url` when passing in images. You can pass multiple images by adding multiple `image_url` content parts."""
 
 
@@ -571,7 +597,9 @@ class ResponseFormat1(BaseModel):
     json_schema: JSONSchema
 
 
-ResponseFormatTypedDict = Union[ResponseFormat2TypedDict, ResponseFormat1TypedDict]
+ResponseFormatTypedDict = TypeAliasType(
+    "ResponseFormatTypedDict", Union[ResponseFormat2TypedDict, ResponseFormat1TypedDict]
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema
@@ -582,7 +610,9 @@ Important: when using JSON mode, you must also instruct the model to produce JSO
 """
 
 
-ResponseFormat = Union[ResponseFormat2, ResponseFormat1]
+ResponseFormat = TypeAliasType(
+    "ResponseFormat", Union[ResponseFormat2, ResponseFormat1]
+)
 r"""An object specifying the format that the model must output.
 
 Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema

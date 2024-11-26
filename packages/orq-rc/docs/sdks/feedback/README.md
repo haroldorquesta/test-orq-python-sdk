@@ -17,17 +17,16 @@ Submit feedback for the LLM transaction via the API
 from orq_poc_python_multi_env_version import Orq
 import os
 
-s = Orq(
+with Orq(
     api_key=os.getenv("ORQ_API_KEY", ""),
-)
+) as s:
+    res = s.feedback.create(value=[
+        "good",
+    ], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating")
 
-res = s.feedback.create(value=[
-    "good",
-], trace_id="67HTZ65Z9W91HSF51CW68KK1QH", property2="rating")
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
