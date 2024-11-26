@@ -47041,6 +47041,7 @@ paths:
         - "resources"
       x-speakeasy-group: "prompts"
       x-speakeasy-name-override: "update"
+      x-speakeasy-ignore: true
       operationId: "UpdatePrompt"
       summary: "Update a prompt"
       parameters:
